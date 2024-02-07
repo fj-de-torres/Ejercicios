@@ -39,6 +39,16 @@ def crear_data():
     program.append("C#")
 
     return program
+programacion = crear_data() #Invocación para crear la lista programación
+
+def eliminar_duplicados(lista_lenguajes):
+    lista_sin_duplicados = []
+    for lenguaje in lista_lenguajes:
+        if lenguaje in lista_sin_duplicados:
+            continue #sal de lo que queda del for y inicial y pasa a la siguiente iteración.
+    lista_sin_duplicados.append(lenguaje)
+    return lista_sin_duplicados
+
 
 '''
 Lenguajes a añadir:
@@ -54,7 +64,6 @@ def listar_lenguajes(whateverlist):
     for lenguaje in whateverlist:
         print(lenguaje)
     print("--------")
-listar_lenguajes(programacion)
 
 def normalizar_datos(lista_lenguajes):
     #Convertir todos los lenguajes a minúscula
@@ -63,6 +72,12 @@ def normalizar_datos(lista_lenguajes):
         lista_lenguajes_normalizada.append(lenguaje.lower)
     return lista_lenguajes_normalizada
 
+#listar_lenguajes(programacion) #invocación
+programacion= crear_data()
+programacion_normalizada = eliminar_duplicados(normalizar_datos(programacion))
+
+#listar_lenguajes(programacion_normalizada)
+#programacion_normalizada_sin_duplicados
 lenguaje = input ("Añada otro lenguaje: ")
 # if programacion != None and type(programacion) == list and lenguaje != None and lenguaje != "":
 #     for list_item in programacion:
@@ -74,7 +89,7 @@ lenguaje = input ("Añada otro lenguaje: ")
 if programacion != None:
     if type(programacion) == list:
         if lenguaje != None and lenguaje != "":
-            programacion.append(lenguaje) if lenguaje not in programacion else None
+            programacion_normalizada.append(lenguaje) if lenguaje.lower() not in programacion_normalizada else None
             # lenguaje not in programacion and programacion.append(lenguaje)
 # Comprobación:
 #Después:
