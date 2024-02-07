@@ -1,4 +1,5 @@
 #🅻🅸🆂🆃🅰🆂:
+
 import os
 os.system("cls || clear")
 # Valores booleanos = [] #lista vacía
@@ -14,4 +15,12 @@ for valor_booleano in valores_booleanos:
     elif valor_booleano == False:
         numero_falses = numero_falses + 1
 
-print(f"Numero de trues: {numero_trues}", f"Número de falses: {numero_falses}")
+print(f"Numero de trues: {numero_trues}", f"Número de falses: {numero_falses}", sep = " --- ")
+numero_trues = 0
+numero_falses = 0
+#My solution:
+for list_element in valores_booleanos:
+    numero_trues = numero_trues + 1 if list_element == True else numero_trues
+    numero_falses = numero_falses + 1 if list_element == False else numero_falses
+
+print(f"Numero de trues: {numero_trues}", f"Número de falses: {numero_falses}",sep = " <---> ")
