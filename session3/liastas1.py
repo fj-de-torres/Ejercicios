@@ -44,11 +44,15 @@ programacion = crear_data() #Invocación para crear la lista programación
 def eliminar_duplicados(lista_lenguajes):
     lista_sin_duplicados = []
     for lenguaje in lista_lenguajes:
-        if lenguaje in lista_sin_duplicados:
-            continue #sal de lo que queda del for y inicial y pasa a la siguiente iteración.
+        if lenguaje in lista_sin_duplicados: continue #sal de lo que queda del for y inicial y pasa a la siguiente iteración.
     lista_sin_duplicados.append(lenguaje)
     return lista_sin_duplicados
 
+# def eliminar_duplicados2(lista_lenguajes):
+#         if lenguaje not in lista_sin_duplicados: 
+#             continue #sal de lo que queda del for y inicial y pasa a la siguiente iteración.
+#     lista_sin_duplicados.append(lenguaje)
+#     return lista_sin_duplicados
 
 '''
 Lenguajes a añadir:
