@@ -25,15 +25,20 @@ for list_element in valores_booleanos:
 
 print(f"Numero de trues: {numero_trues}", f"Número de falses: {numero_falses}",sep = " <---> ")
 
-programacion = ["python","Java","kotlin","Typescript","C#"]
+program = ["python","Java","kotlin","Typescript","C#"]
 #O también puedo crear una lista vacía y ya la llenaré luego:
 programación = []
 #Añadir items a la lista:
-programacion.append("python")
-programacion.append("Java")
-programacion.append("Kotlin")
-programacion.append("TS")
-programacion.append("C#")
+def crear_data():
+    program = list()
+    #anyadir items  a la lista
+    program.append("Python")
+    program.append("Java")
+    program.append("Kotlin")
+    program.append("TS")
+    program.append("C#")
+
+    return program
 
 '''
 Lenguajes a añadir:
@@ -50,6 +55,13 @@ def listar_lenguajes(whateverlist):
         print(lenguaje)
     print("--------")
 listar_lenguajes(programacion)
+
+def normalizar_datos(lista_lenguajes):
+    #Convertir todos los lenguajes a minúscula
+    lista_lenguajes_normalizada = list()
+    for lenguaje in lista_lenguajes:
+        lista_lenguajes_normalizada.append(lenguaje.lower)
+    return lista_lenguajes_normalizada
 
 lenguaje = input ("Añada otro lenguaje: ")
 # if programacion != None and type(programacion) == list and lenguaje != None and lenguaje != "":
