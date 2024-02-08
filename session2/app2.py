@@ -21,3 +21,4 @@ for i in nuevo_mensaje:
         count = count + 1
 
 print(f"Hay {count} números")
+print(nuevo_mensaje)
