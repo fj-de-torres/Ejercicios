@@ -48,11 +48,10 @@ def eliminar_duplicados(lista_lenguajes):
     lista_sin_duplicados.append(lenguaje)
     return lista_sin_duplicados
 
-# def eliminar_duplicados2(lista_lenguajes):
-#         if lenguaje not in lista_sin_duplicados: 
-#             continue #sal de lo que queda del for y inicial y pasa a la siguiente iteración.
-#     lista_sin_duplicados.append(lenguaje)
-#     return lista_sin_duplicados
+def eliminar_duplicados2(lista_lenguajes):
+    if lenguaje not in lista_lenguajes: 
+        lista_lenguajes.append(lenguaje)
+        return lista_lenguajes
 
 '''
 Lenguajes a añadir:
