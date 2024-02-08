@@ -27,4 +27,23 @@ print(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + str(type(n)))
 
 lista_tuplas = [(1,2), (4,6),('Juan',9),(True,False)] #Lista de tuplas. También puedo tener una tupla de listas
 
-print(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + str(tupla5 [-1]))
+print(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + str(tupla5 [-1])+ Style.RESET_ALL)
+
+
+t1, t2, t3, t4 = lista_tuplas #Si desempacamos todo, es todo. O sea, hay que incluir hasta t4
+print(t1,t2,t3,t4,sep ="---")
+#Para muchas más que desempacar:
+t1, *_ = lista_tuplas #Sólo quiero el primero. *_ es un agujero negro al que van el resto y no me dará error
+t1, *resto = lista_tuplas #Sí sale el resto. Pero todos dentro de una lista.
+#Cogiendo otros de dentro:
+
+_,t2, _,_ = lista_tuplas
+
+
+#Convertir una lista en una tupla:
+
+print(list(tupla = (2,5,8)))
+# print(lista) #Ya es tupla
+# print(type(lista))
+tupla = tuple([1,2,3,4])
+print(type(tupla))

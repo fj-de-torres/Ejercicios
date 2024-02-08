@@ -14,8 +14,8 @@ la semana, además de calcular la temperatura promedio.
 def insert_daily_temp (min_temp,max_temp):
     list_daily_min_max = [None,None]
     min_temp = input("Please, enter MINIMUM temperature registered today: ")
-    if min_temp.isdigit() or (min_temp.lstrip(0) == "-" and min_temp(1:).isdigit()):
-        max_temp = input("Please, enter MAXIMUM termperature registered today: ")
+    max_temp = input("Please, enter MAXIMUM termperature registered today: ")
+    if min_temp.isdigit() or (min_temp.lstrip(0) == "-" and min_temp[1:].isdigit()):
         list_daily_min_max = [min_temp,max_temp]
         if min_temp > max_temp:
             print("You entered them in the wrong order. No problem, I'll reverse them for you!")
@@ -27,3 +27,7 @@ def insert_daily_temp (min_temp,max_temp):
 
 tuple_daily = insert_daily_temp(min,max)
 #print( tuple_daily)
+semana = ["Lunes","Martes"]
+temperarutas_semana = list()
+for _ in range(len(semana)): # _ no me interesa el valor de la variable en cada una de las iteraciones. Sólo iterrar
+#Converit
