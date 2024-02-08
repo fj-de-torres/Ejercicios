@@ -42,8 +42,10 @@ _,t2, _,_ = lista_tuplas
 
 #Convertir una lista en una tupla:
 
-print(list(tupla = (2,5,8)))
+print(list((2,5,8)))
 # print(lista) #Ya es tupla
 # print(type(lista))
 tupla = tuple([1,2,3,4])
+print(tupla)
 print(type(tupla))
+
