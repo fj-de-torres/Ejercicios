@@ -29,5 +29,4 @@ tuple_daily = insert_daily_temp(min,max)
 #print( tuple_daily)
 semana = ["Lunes","Martes"]
 temperarutas_semana = list()
-for _ in range(len(semana)): # _ no me interesa el valor de la variable en cada una de las iteraciones. Sólo iterrar
-#Converit
+for _ in range(len(semana)): # _ no me interesa el valor de la variable en cada una de las iteraciones. Sólo iterar
