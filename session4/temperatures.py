@@ -10,23 +10,40 @@ mínima de cada día de la semana. Al final de la semana, el programa debe
 ser capaz de mostrar la temperatura máxima y mínima registrada durante
 la semana, además de calcular la temperatura promedio.
 """
-#Function to enter data:
-def insert_daily_temp (min_temp,max_temp):
-    list_daily_min_max = [None,None]
-    min_temp = input("Please, enter MINIMUM temperature registered today: ")
-    max_temp = input("Please, enter MAXIMUM termperature registered today: ")
-    if min_temp.isdigit() or (min_temp.lstrip(0) == "-" and min_temp[1:].isdigit()):
-        list_daily_min_max = [min_temp,max_temp]
-        if min_temp > max_temp:
-            print("You entered them in the wrong order. No problem, I'll reverse them for you!")
-            list_daily_min_max.sort(reverse=True)
-            print(list_daily_min_max)
-        min_temp = list_daily_min_max[0]
-        max_temp = list_daily_min_max[1]
-        return min_temp, max_temp
+def check_isdigit(item):
+    result = True if item.isnumeric() or (item.startswith("-") and item[1:].isnumeric()) else False
+    return result        
 
+#Function to enter data:
+def insert_daily_temp ():
+    def request_until_is_number(item_type: str): #I won't stop until the user enters correct input!
+        item = None
+        while item == None:
+            item = input(f"Please, enter {item_type} temperature registered today: ")
+            if check_isdigit(item):
+                item = float(item)
+            else:
+                item = None
+                print(Fore.LIGHTRED_EX + "That's not a number. Please try again" + Style.RESET_ALL)
+                continue
+        return item
+    
+    min_temp = request_until_is_number("MINIMUM")
+    max_temp = request_until_is_number("MAXIMUM")
+    list_daily_min_max = [min_temp,max_temp]    
+
+    if min_temp > max_temp:
+        print(Style.BRIGHT + Fore.YELLOW + "You entered them in the wrong order. No problem, I'll reverse them for you!" + Style.RESET_ALL)
+        # list_daily_min_max.sort(reverse=True)
+        # print(list_daily_min_max) <= No sé por qué demonios no hay un reverse de los datos a pesar de hacer esto
+        min_temp = list_daily_min_max[1]
+        max_temp = list_daily_min_max[0]
+    return (min_temp, max_temp)
+print(insert_daily_temp())
+""" 
 tuple_daily = insert_daily_temp(min,max)
 #print( tuple_daily)
 semana = ["Lunes","Martes"]
 temperarutas_semana = list()
 for _ in range(len(semana)): # _ no me interesa el valor de la variable en cada una de las iteraciones. Sólo iterar
+ """

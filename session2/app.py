@@ -13,7 +13,7 @@ nombre_y_apellido = "Juan López"
 Se le llama snake case por esa unión a través de guiones bajos. ¡No usar guiones altos!
 Da error.
 
-- No existen las contantes. Pero aquellas variables que quiera dejar constantes, las
+- No existen las constantes. Pero aquellas variables que quiera dejar constantes, las
 defino con mayúsculas (Upper snake case):
 PI = 3.1416
 a PI se le puede asignar otro valor en cualquier parte del código.
