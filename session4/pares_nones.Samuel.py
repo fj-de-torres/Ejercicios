@@ -1,12 +1,15 @@
 # PAR E IMPAR
+import os
+os.system("cls || clear")
+
+def tratar_numero(lista_numeros, elemento):
+    lista_numeros.append(elemento)
+    return lista_numeros, sum(lista_numeros)
+
 
 # 0. Programa principal
 if __name__ == "__main__":
     pass
-def tratar_numero(lista_numeros,elemento):
-    lista_numeros.append(elemento)
-    #sum(lista_numeros) #sumatorio de todos los elementos siempre y cuando sean números lo que hay dentro
-    return lista_numeros, sum(lista_numeros)
 
     # 1. Introducir datos
     mensaje = input("Por favor, ingresa la lista de números:  ")
@@ -37,16 +40,16 @@ def tratar_numero(lista_numeros,elemento):
 
             if elemento % 2 == 0:
                 cant_pares = cant_pares + 1
-                """ suma_pares = suma_pares + elemento
-                lista_pares.append(elemento) # Guardar elemento par
-                #COMP_VISUAL: print(f"Par: {elemento}") """
-                lista_pares, suma_pares = tratar_numero(lista_pares,elemento)
+                #suma_pares = suma_pares + elemento
+                #lista_pares.append(elemento) # Guardar elemento par
+                lista_pares, suma_pares = tratar_numero(lista_pares, elemento)
+                #COMP_VISUAL: print(f"Par: {elemento}")
             else:
                 cant_impares = cant_impares + 1
-                lista_impares, suma_impares = tratar_numero(lista_impares,elemento)
-                """ suma_impares = suma_impares + elemento
-                lista_pares, suma_pares = lista_impares.append(elemento) # Guardar elemento impar
-                #COMP_VISUAL: print(f"Impar: {elemento}") """  
+                #suma_impares = suma_impares + elemento
+                #lista_impares.append(elemento) # Guardar elemento impar
+                lista_impares, suma_impares = tratar_numero(lista_impares, elemento)
+                #COMP_VISUAL: print(f"Impar: {elemento}")  
 
 
     # 4. Sacar por pantalla resultado
