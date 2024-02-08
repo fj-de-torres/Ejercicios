@@ -10,8 +10,11 @@ mínima de cada día de la semana. Al final de la semana, el programa debe
 ser capaz de mostrar la temperatura máxima y mínima registrada durante
 la semana, además de calcular la temperatura promedio.
 """
-def check_isdigit(item):
-    result = True if item.isnumeric() or (item.startswith("-") and item[1:].isnumeric()) else False
+def check_isdigit(item:str):
+    item = str(item).replace(".","")
+    #print(item)
+    result = True if item.isdecimal() or (item.startswith("-") and item[1:].isdecimal()) else False
+    #result = True if item.isdecimal() else False
     return result        
 
 #Function to enter data:
@@ -39,7 +42,11 @@ def insert_daily_temp ():
         min_temp = list_daily_min_max[1]
         max_temp = list_daily_min_max[0]
     return (min_temp, max_temp)
-print(insert_daily_temp())
+week_days = ["Mon","Tues","Wed","Thu","Fri"]
+tuple_daily = []
+for day in list(range(len(week_days))):
+    tuple_daily [day] = insert_daily_temp()
+print(tuple_daily)
 """ 
 tuple_daily = insert_daily_temp(min,max)
 #print( tuple_daily)
