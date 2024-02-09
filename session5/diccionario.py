@@ -78,4 +78,23 @@ valor_item = diccio1.get("v",-999) # Con get, si pido algo que no existe, me duv
 
 print(valor_item)
 
-dic1 = dict(a=1)
+#dic1 = dict(a=1)
+
+#Creación de una posible papelera:
+
+mi_diccionario = {
+    'a': 100,
+    'b': 200,
+    'c': 300
+}
+
+papelera = dict()
+par_eliminado = mi_diccionario.popitem()
+papelera.update(dict([par_eliminado]) # Convierto a dict porque lo que obtengo (par clave - valor) es una tupla. No puedo añadir tuplas a diccionarios, sino diccionarios a diccionarios. Por lo que lo convierto primero.
+                
+papelera.update(dict([diccio1.popitem()]))
+
+nuevo_diccionario = dict([("a",6), ("c", 4)])
+papelera.update(nuevo_diccionario)
+
+print(papelera)
