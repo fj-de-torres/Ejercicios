@@ -82,3 +82,5 @@ print(matriz[0][-1])
 
 matriz3d = [[[1,2,3],[4,5,6],[7,8,9]],[[10,11,12],[13,14,15],[16,17,18]]]
 print (matriz3d [1][1][1])
+
+#Una lista de tuplas también es una matriz, pero no puedo modificar los elementos. Es decir, puedo modificar el contenedor pero no el contenido.
