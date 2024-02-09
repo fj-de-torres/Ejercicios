@@ -98,3 +98,4 @@ nuevo_diccionario = dict([("a",6), ("c", 4)])
 papelera.update(nuevo_diccionario)
 
 print(papelera)
+#.remove elimina el elemento elegido y duelve como resultado lo que queda. Sería una manera de devolver todos los datos del cliente (en app.py) salvo el dni, que es lo que eliminamos con 'remove'
