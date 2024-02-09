@@ -65,6 +65,7 @@ lista_total = lista1 + lista2
 
 print(lista_total)
 
+lista3 = lista1 *3 #[1,2,1,2,1,2]
 #También se puede hacer así:
 lista_total2 = lista1.extend(lista2) #Devuelve un None. Para añadirla a la anterior, se hace como con .pop():
 lista1.extend(lista2)
@@ -76,6 +77,8 @@ lista3 = lista2.copy() # Es un método que también clona, como en el caso anter
 
 #Se pueden hacer listas de varias dimensiones: 𝙢𝙖𝙩𝙧𝙞𝙘𝙚𝙨 -> listas de listas
 matriz = [[1,2,3], [4,5,6], [6,4,1]]
+
 print(matriz[0][-1])
+
 matriz3d = [[[1,2,3],[4,5,6],[7,8,9]],[[10,11,12],[13,14,15],[16,17,18]]]
 print (matriz3d [1][1][1])
