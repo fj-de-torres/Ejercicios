@@ -49,3 +49,18 @@ tupla = tuple([1,2,3,4])
 print(tupla)
 print(type(tupla))
 
+for numero1, numero2 in [(1,2),(2,1)]:
+    print (numero1,numero2, sep="==")
+
+for numero1, numero2 in [(1,2),(2,1)]:   
+    print(numero2, sep="**")
+
+#Listas
+#Ídem que tuplas:
+x,y,z = [1,5,8]
+
+print(x,y,z)
+
+def procesar():
+    l = [1,2,3]
+    return l  # ===> A través de la lista le estoy asignando varios valores al return
