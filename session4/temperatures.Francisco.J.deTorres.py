@@ -56,8 +56,8 @@ print(Style.BRIGHT + "Week temperatures are (in Celsius):")
 count = 0
 min_sum = 0
 max_sum = 0
-min_average = 1
-max_average = 1
+min_average = None
+max_average = None
 for day in week_days:
     print(Style.BRIGHT + Fore.LIGHTBLUE_EX + day + Style.RESET_ALL)
     print("Min:","Max:",sep="  ")
