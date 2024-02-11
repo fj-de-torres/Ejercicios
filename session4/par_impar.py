@@ -24,7 +24,7 @@ user_2list = user_entry.split(",")
 #print(user_2list)
 
 for list_item in user_2list:
-    if list_item.isdigit() or (list_item.lstrip()=="-" and list_item[1:].isdigit()):
+    if list_item.isdigit() or (list_item.startswith("-") and list_item[1:].isdigit()):
         list_item =int(list_item)
         if list_item % 2 == 0:
             even_nums += list_item
