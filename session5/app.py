@@ -16,7 +16,7 @@ clientes = [{
 
 #Tendré que hacer cosas como buscar cliente, eliminar cliente, etc.
 #Haremos un contendedor principal como diccionario donde la clave de acceso va a ser el DNI de cada cliente.
-#A este, le podemos asocial el resto de los datos como lista, tuplas, diccinario....
+#A este, le podemos asociar el resto de los datos como lista, tuplas, diccinario....
 """ 
 cliente = {
     '111H': {
