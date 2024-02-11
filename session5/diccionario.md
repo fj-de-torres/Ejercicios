@@ -116,22 +116,25 @@ item_eliminado  = diccio2.popitem() #Me elimina el último valor y lo obtendo co
 ```
 diccio2.clear()
 print(diccio2)
-del diccio2 # Lo elimina de la memoria:
+```
+##### Lo elimina de la memoria:
+```
+del diccio2
+
+print(diccio2)
 ```
 
-```
-#print(diccio2)
-```
 
 
-
-##### Obtención o lectura:
+#### Obtención o lectura:
 
 ```
 valor_item = diccio1.get("a")
 print(valor_item)
-
-valor_item = diccio1.get("v",-999) # Con get, si pido algo que no existe, me duvuelve None. O puedo asignar un valor por defecto a lo que no exista. En este caso, el -999.
+```
+Con get, si pido algo que no existe, me duvuelve None. O puedo asignar un valor por defecto a lo que no exista. En este caso, el -999:
+```
+valor_item = diccio1.get("v",-999)
 
 print(valor_item)
 ```

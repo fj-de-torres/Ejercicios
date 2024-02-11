@@ -17,7 +17,7 @@ diccio2 = {
     "b":2,
     "c":3,
 }
-#Acceso a los valores de del diccionario: a través de la clave.
+print("Acceso a los valores de del diccionario: a través de la clave:")
 print(diccio1["a"])
 mensaje = diccio1["f"] if "f" in diccio1 else "Esa clave no existe" #Key error cuando no existe la clave a través de la que tratamos de acceder al diccionario.
 print(mensaje)
@@ -37,7 +37,7 @@ diccio1.update(new_data) # Los elementos de new_data me sirver para amplicar dic
 print(diccio1)
 
 #¿Cómo se recorre un diccionario?
-
+print("For item in dicctio1:")
 for item in diccio1:
     print(item) #Sólo va a imprimr las claves
 
@@ -47,9 +47,15 @@ for item in diccio1.items():
 for clave, valor in diccio1.items():
     print(f"Clave: {clave} Valor: {valor}")
 
-    x,y,z = diccio2.items()
-    print(x,y,z)
-
+x,y,z = diccio2.items()
+print("print('dicciot2')")
+print(diccio2)
+print("print(x,y,z)")
+print(x,y,z)
+print("Valores = diccio2.values()")
+valores = diccio2.values()
+print("print(valores)")
+print(valores)
 valores = list(diccio2.values())
 print(valores)
 print(type(valores))
