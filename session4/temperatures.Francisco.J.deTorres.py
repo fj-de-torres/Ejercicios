@@ -60,7 +60,7 @@ min_average = None
 max_average = None
 for day in week_days:
     print(Style.BRIGHT + Fore.LIGHTBLUE_EX + day + Style.RESET_ALL)
-    print("Min:","Max:",sep="  ")
+    print("Min:","Max:")
     print(temp_weekdays[count])
     min_sum += temp_weekdays[count][0]
     max_sum += temp_weekdays[count][1]
