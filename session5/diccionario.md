@@ -104,42 +104,59 @@ item_eliminado = diccio2.pop("a") #elima el que elijo y me lo da como parámetro
 print(diccio2)
 
 item_eliminado  = diccio2.popitem() #Me elimina el último valor y lo obtendo como parámetro (como en las listas)
-#Vaciado del diccionario:
+```
+
+##### Vaciado del diccionario:
+
+```
 diccio2.clear()
 print(diccio2)
 del diccio2 # Lo elimina de la memoria:
 ```
 
-
-
+```
 #print(diccio2)
+```
 
-#Obtención o lectura:
+
+
+##### Obtención o lectura:
+
+```
 valor_item = diccio1.get("a")
 print(valor_item)
 
 valor_item = diccio1.get("v",-999) # Con get, si pido algo que no existe, me duvuelve None. O puedo asignar un valor por defecto a lo que no exista. En este caso, el -999.
 
 print(valor_item)
+```
 
+```
 #dic1 = dict(a=1)
+```
+#### Creación de una posible papelera:
 
-#Creación de una posible papelera:
-
+```
 mi_diccionario = {
     'a': 100,
     'b': 200,
     'c': 300
 }
-
+```
+```
 papelera = dict()
 par_eliminado = mi_diccionario.popitem()
 papelera.update(dict([par_eliminado]) # Convierto a dict porque lo que obtengo (par clave - valor) es una tupla. No puedo añadir tuplas a diccionarios, sino diccionarios a diccionarios. Por lo que lo convierto primero.
-                
+```
+```            
 papelera.update(dict([diccio1.popitem()]))
-
+```
+```
 nuevo_diccionario = dict([("a",6), ("c", 4)])
 papelera.update(nuevo_diccionario)
-
+```
+```
 print(papelera)
-#.remove elimina el elemento elegido y duelve como resultado lo que queda. Sería una manera de devolver todos los datos del cliente (en app.py) salvo el dni, que es lo que eliminamos con 'remove'
+```
+
+*.remove*  elimina el elemento elegido y duelve como resultado lo que queda. Sería una manera de devolver todos los datos del cliente (en app.py) salvo el dni, que es lo que eliminamos con *remove*

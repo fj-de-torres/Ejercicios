@@ -1,7 +1,7 @@
 import os
 os.system( "cls || clear")
 #   DICCIONARIOS:
-
+from colorama import Fore, Style, Back, Cursor
 # Estructura compuesta de pares de clave:valor
 
 diccio1 = dict(a=1, b=2, c=3)
@@ -90,7 +90,7 @@ mi_diccionario = {
 
 papelera = dict()
 par_eliminado = mi_diccionario.popitem()
-papelera.update(dict([par_eliminado]) # Convierto a dict porque lo que obtengo (par clave - valor) es una tupla. No puedo añadir tuplas a diccionarios, sino diccionarios a diccionarios. Por lo que lo convierto primero.
+papelera.update(dict([par_eliminado])) # Convierto a dict porque lo que obtengo (par clave - valor) es una tupla. No puedo añadir tuplas a diccionarios, sino diccionarios a diccionarios. Por lo que lo convierto primero.
                 
 papelera.update(dict([diccio1.popitem()]))
 
