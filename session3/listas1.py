@@ -2,7 +2,8 @@
 
 import os
 os.system("cls || clear")
-# Valores booleanos = [] #lista vacía
+
+Valores_booleanos = [] #lista vacía
 
 valores_booleanos = [True, True, False, True, True, False] #Lista de elementos booleanos
 
@@ -31,7 +32,7 @@ programación = []
 #Añadir items a la lista:
 def crear_data():
     program = list()
-    #anyadir items  a la lista
+    #añadir items  a la lista
     program.append("Python")
     program.append("Java")
     program.append("Kotlin")
