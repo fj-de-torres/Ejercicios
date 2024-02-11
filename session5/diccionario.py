@@ -19,7 +19,7 @@ diccio2 = {
 }
 #Acceso a los valores de del diccionario: a través de la clave.
 print(diccio1["a"])
-mensaje = diccio["f"] if "f" in diccio1 else "Esa clave no existe" #Key error cuando no existe la clave a través de la que tratamos de acceder al diccionario.
+mensaje = diccio1["f"] if "f" in diccio1 else "Esa clave no existe" #Key error cuando no existe la clave a través de la que tratamos de acceder al diccionario.
 print(mensaje)
 
 #No es una estructura ordenada porque yo puedo acceder directamente al valor que quiera nombrando su clave.

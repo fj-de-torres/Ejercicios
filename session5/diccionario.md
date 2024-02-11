@@ -39,7 +39,7 @@ diccio2 = {
 
 ```
 print(diccio1["a"])
-mensaje = diccio["f"] if "f" in diccio1 else "Esa clave no existe" #Key error cuando no existe la clave a través de la que tratamos de acceder al diccionario.
+mensaje = diccio1["f"] if "f" in diccio1 else "Esa clave no existe" #Key_error cuando no existe la clave a través de la que tratamos de acceder al diccionario.
 print(mensaje)
 ```
 
@@ -61,7 +61,10 @@ new_data = {
     'h': 90,
     'm': 100,
 }
-diccio1.update(new_data) # Los elementos de new_data me sirve para amplicar diccio1:
+diccio1.update(new_data)
+```
+Los elementos de *new_data* me sirve para ampliar **diccio1**:
+```
 print(diccio1)
 ```
 
@@ -71,8 +74,10 @@ print(diccio1)
 
 ```
 for item in diccio1:
-    print(item) #Sólo va a imprimr las claves
-
+    print(item) 
+```
+(sólo va a imprimr las claves)
+```
 for item in diccio1.items():
     print(item)
 
