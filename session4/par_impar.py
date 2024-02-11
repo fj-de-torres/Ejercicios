@@ -36,7 +36,7 @@ for list_item in user_2list:
         no_numerics.append(str(list_item))
         #print(no_numerics)
 
-print(Fore.RED + Style.BRIGHT + "Attention: " + Style.NORMAL + f"No numeric strings: " + Fore.LIGHTRED_EX + f"{no_numerics}" + Fore.RED + ", have been discarded within this list" + Style.RESET_ALL,end = "\n\n") if len(no_numerics) >= 1 else None
+print(Fore.RED + Style.BRIGHT + "Attention: " + Style.NORMAL + f"Non numeric strings: " + Fore.LIGHTRED_EX + f"{no_numerics}" + Fore.RED + ", have been discarded within this list" + Style.RESET_ALL,end = "\n\n") if len(no_numerics) >= 1 else None
 
 print("The sum of the " + Style.BRIGHT + Fore.LIGHTCYAN_EX + f"even numbers " + Style.NORMAL + Fore.WHITE + f"({even_list}) is:" + Style.BRIGHT + Fore.LIGHTCYAN_EX + f" {even_nums}" + Style.NORMAL + Fore.WHITE + ", and the sum of the " + Style.BRIGHT + Fore.LIGHTMAGENTA_EX + "odd numbers (" + Style.NORMAL + Fore.WHITE + f"{odd_list})" +  Fore.WHITE + " is " + Style.BRIGHT + Fore.LIGHTMAGENTA_EX + f"{odd_nums}")
 print()
