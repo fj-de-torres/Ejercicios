@@ -23,7 +23,7 @@ DNI, Nombre, Apellido, CP.
 
 Tendré que hacer cosas como buscar cliente, eliminar cliente, etc.
 Haremos un contendedor principal como diccionario donde la clave de acceso va a ser el DNI de cada cliente.
-#####  A este, le podemos asocial el resto de los datos como lista, tuplas, diccinario....
+#####  A este, le podemos asociar el resto de los datos como lista, tuplas, diccinario....
 """ 
 *cliente = {*
     *'111H': {*
@@ -35,9 +35,11 @@ Haremos un contendedor principal como diccionario donde la clave de acceso va a 
  """
 
 ```def crear_cliente(data:dict) -> dict:
-    id_cliente = data['dni']
-    cliente = { id_cliente: data}
+def crear_cliente(data:dict) -> dict:
+	id_cliente = data['dni']
+	cliente = { id_cliente: data}
     return cliente
+    
 def eliminar_cliente(clave: str, diccio: dict):
     if clave in diccio:
         diccio.pop(clave)
@@ -47,18 +49,18 @@ def eliminar_cliente(clave: str, diccio: dict):
 
 
 ```def buscar_cliente(dni_cliente:str, d_clientes:dict) -> dict:
-    if dni_cliente not in d_clientes: return #Esto devuelve un None si el DNI no existe. Salgo de la función
+"""
+def buscar_cliente(dni_cliene:str, d_clientes:dict) -> dict:
+	if dni_cliente not in d_clientes: return #Esto devuelve un None si el DNI no existe. Salgo de la función
     return d_clientes[d_clientes]
+"""
 ```
 
 
 
 ```def buscar_cliente(dni_cliente: str, d_clientes: dict) -> dict:
-    return d_clientes.get(dni_cliente)
-"""     
-    if dni_cliente not in d_clientes: return #None
-    return d_clientes[dni_cliente]
- """
+def buscar_cliente(dni_cliente:str, d_clientes:dict) -> dict:
+return d_clientes.get(dni_cliente)
     
 ```
 
@@ -66,13 +68,17 @@ def eliminar_cliente(clave: str, diccio: dict):
 
           # print (_) #dará el resto; o sea, el diccioario de cada cliente
 #### Aclaración
-##### dni, *_ = [(1,2,3,4),(8,9,7,6), (1,2,3,4,5)]
-##### print(dni)
+```
+dni, *_ = [(1,2,3,4),(8,9,7,6), (1,2,3,4,5)]
 
-clientes = dict()
+print(dni)
+```
+
+
 
 ```if __name__ == "__main__":
-    data_cliente1 = {
+clientes = dict()
+data_cliente1 = {
         'dni':'111H',
         'nombre': 'Juan',
         'apellido': 'Lopez',
