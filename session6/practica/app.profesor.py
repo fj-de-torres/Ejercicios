@@ -1,4 +1,4 @@
-from proceso import cargar_asignaturas
+from proceso_profesor import cargar_asignaturas
 
 if __name__ == "__main__":
     asignaturas = None
