@@ -27,7 +27,6 @@ def calcular(x:int, y: int, d:dict):
 def mayor_siete(alumno:tuple):
     nota = alumno[1]
     return nota > 7.0
-##### map -> transformación: un arreglo a la función alumnos con nota x * .5 (arreglo un resultado)
 ##### filtrado -> filtrado: alumnos que han obtenido una nota > 7. Me devuelve una colección que cumple las condiciones del filtrado.
 
 alumnos = [('maite',6.0), ('alicia', 8.0), ('luis', 7.5), ('juan',7.0)]
@@ -48,3 +47,23 @@ print(alumnos_mas_siete)
 alumnos_mas_siete = list(filter(lambda alumno: mayor_siete(alumno) , alumnos))
 print(type(alumnos_mas_siete))
 print(alumnos_mas_siete)
+
+##### map -> transformación: un arreglo a la función alumnos con nota x * .5 (arreglo un resultado)
+#Vamos a sumarle un .5 a la nota de todos los alumnos (ej: nos hemos equivocados con sus notas y les sumaremos medio punto)
+alumnos_nota_corregida = map (lambda alumno: (alumno[0],alumno[1] + .5), alumnos) #Todos estos paréntesis no son opcionales. Significa que estoy creando una nueva tupla.
+
+print(type(alumnos_nota_corregida))
+print(alumnos_nota_corregida) # -> esto me da una posición de moria, no la lista que pretendo tener. Así que convierto el map a lista. Las tuplas no son modificables, que es lo que estoy obteniendo; pero es que estoy creando una tupla nueva:
+
+alumnos_nota_corregida = list(map (lambda alumno: (alumno[0],alumno[1] + .5), alumnos))
+
+#Supongamos esta función al estilo clasico:
+
+def sumar_medio_punto(alumno: tuple) -> tuple:
+    alumno_modificado = (alumno[0], alumno[1] + 0.5)
+    return alumno_modificado
+
+#Aquí estoy usando la función anterior para definir la condición para el map:
+alumnos_nota_corregida = list(map(sumar_medio_punto , alumnos))
+print(type(alumnos_nota_corregida))
+print(alumnos_nota_corregida)
