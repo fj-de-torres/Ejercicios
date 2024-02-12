@@ -1,4 +1,4 @@
-#𝒲𝑜𝓇𝓁𝒹 𝑜𝒻 𝒯𝓊𝓅𝓁𝑒𝓈:
+# 𝒲𝑜𝓇𝓁𝒹 𝑜𝒻 𝒯𝓊𝓅𝓁𝑒𝓈:
 import os
 os.system("cls || clear")
 from colorama import Fore, Back, Style
