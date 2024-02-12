@@ -24,13 +24,35 @@ os.system("cls || clear")
 
 ### 3. Opción 3. Me centro en obtener conjuntos (diccionarios) de asignatura - notas.
     ##### 1. I request the user:
-def get_subject_and_marks (subject:str, *marks:float) -> dict:
+""" 
+marks = None
+subject = None
+subject_list = None
+subject_and_marks_list = None
+ """
+
+def get_subject():
+    subject = input("Please, enter subject name: ")
+    return subject
+
+def get_marks () -> dict:
     marks_list = list()
     subject_and_marks_list = dict()
-    subject_list = input(f"Please enter subject name: {subject}")
-    marks_list = input(f"Please enter marks separted by space: {marks}")
-    marks_list = marks.append()
+    subject = get_subject()
+    marks_list = input("Please enter marks separted by space: ").split()
+    #print(type(marks_list))
+    #marks_list = marks_list.append(marks)
     subject_and_marks_list[subject] = marks_list
+    print(marks_list)
     print(subject_and_marks_list)
+    return subject_and_marks_list
 
-get_subject_and_marks
+subject_and_marks_list = get_marks()
+def marks_average(subject_and_marks_list:dict,subject:str) -> float:
+    marks = subject_and_marks_list[subject]
+    suma = sum(marks)
+    marks_number = len(marks)
+    return suma / marks_number
+
+print(subject_and_marks_list)
+print(marks_average(subject_and_marks_list,"lengua"))
