@@ -37,7 +37,7 @@ if __name__ == "__main__": #Todo lo que va a continuación se ejecuta si se trat
     }
     #### Antes de matricular a los alumnos:
     print (f"ANTES MAT: {alumnos}")
-    alumnos = matricular_alumnos(curso=alumnos, **nuevos_alumnos)
+    alumnos = matricular_alumnos(curso=alumnos, **nuevos_alumnos) #Le estoy pasando el contenido. Le estoy pasando los pares de dentro del diccionario
     print(f"DESPUES MAT: {alumnos}")
     resultado = sumar(10,3)
     print(f"Resultado: {resultado}")
@@ -65,6 +65,8 @@ print(resultado2)
 resultado = sumar_v2(10,3,1,1,1,1,1,1,1,1,1)
 print(f"Resultado_sumarv2:{resultado}")
 
+valores_a_sumar = [2,5,2,8,0]
+resultado = sumar_v2(*valores_a_sumar) #Rompo la lista para coger los valores de dentro. Así no tengo que saber con antelación la cantidad de valores que voy a pasarle
 """ resultado = sumar_v3(10,3,1,1,1,1,1,1,1,1,1, otro_param=str='*') -> int:
     print(otro_param * 60)
     return sum(numeros)
