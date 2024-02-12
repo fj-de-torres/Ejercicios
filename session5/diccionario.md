@@ -35,7 +35,7 @@ diccio2 = {
 
 
 
-##### Acceso a los valores de del diccionario: a través de la clave.
+##### Acceso a los valores de del diccionario: a través de la clave (indexación).
 
 ```
 print(diccio1["a"])
@@ -48,7 +48,7 @@ print(mensaje)
 ##### No es una estructura ordenada porque yo puedo acceder directamente al valor que quiera nombrando su clave.
 
 ```
-diccio1["d"] = 20 # Esto es un acceso de escritura. Estoy añadiendo
+diccio1["d"] = 20 # Esto es un acceso de escritura. Estoy añadiendo. Si no existe, se considera un alta.
 print(diccio1)
 diccio1["a"] = 10 #Value update
 ```
@@ -76,7 +76,10 @@ print(diccio1)
 for item in diccio1:
     print(item) 
 ```
-(sólo va a imprimr las claves)
+(sólo va a imprimr las claves).
+##### Recorrer por pares (tuplas):
+Aunque esto sea un diccionario, de esta manera estoy recorriendo una lista de tuplas.
+
 ```
 for item in diccio1.items():
     print(item)
@@ -85,9 +88,7 @@ for clave, valor in diccio1.items():
     print(f"Clave: {clave} Valor: {valor}")
 ```
 
-
-
-    x,y,z = diccio2.items()
+    x,y,z = diccio2.items() #<= Destructuring
     print(x,y,z)
 
 ```

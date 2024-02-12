@@ -17,14 +17,17 @@ diccio2 = {
     "b":2,
     "c":3,
 }
-print("Acceso a los valores de del diccionario: a través de la clave:")
+
+#se accede al valor a través de la clave (indexación):
+
+print("Acceso a los valores de del diccionario: a través de la clave (indexación):")
 print(diccio1["a"])
 mensaje = diccio1["f"] if "f" in diccio1 else "Esa clave no existe" #Key error cuando no existe la clave a través de la que tratamos de acceder al diccionario.
 print(mensaje)
 
 #No es una estructura ordenada porque yo puedo acceder directamente al valor que quiera nombrando su clave.
 
-diccio1["d"] = 20 # Esto es un acceso de escritura. Estoy añadiendo
+diccio1["d"] = 20 # Esto es un acceso de escritura. Estoy añadiendo. Si no existía, se considera un alta
 print(diccio1)
 diccio1["a"] = 10 #Value update
 
