@@ -34,7 +34,7 @@ Haremos un contendedor principal como diccionario donde la clave de acceso va a 
 *}*
  """
 
-```def crear_cliente(data:dict) -> dict:
+```def crear_cliente(data:dict) -> dict: #Esto de definir el tipo de dato de entrada y/o de salida, es lo que se llama el "type hinting"
 def crear_cliente(data:dict) -> dict:
 	id_cliente = data['dni']
 	cliente = { id_cliente: data}
