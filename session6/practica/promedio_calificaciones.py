@@ -16,10 +16,21 @@ os.system("cls || clear")
 ### 2. Opción 2. La lista de estudiantes es conocida y sólo se necesitan las asignaturas y sus notas. 
 
 ### 3. Opción 3. Me centro en obtener conjuntos (diccionarios) de asignatura - notas.
-        #1. Pido nombre de asignatura
-        #2. Pido lista de notas para esa asignatura.
-        #3.
+        ####1. Pido nombre de asignatura
+        ####2. Pido lista de notas para esa asignatura.
+        ####3.
 ### 4. Calcular el promedio de las calificaciones (¿average()?) para cada lista de asignaturas
 ### 5. Mostrar el promedio el promedio obtenido (print con formato de average)
 
 ### 3. Opción 3. Me centro en obtener conjuntos (diccionarios) de asignatura - notas.
+    ##### 1. I request the user:
+def get_subject_and_marks (subject:str, *marks:float) -> dict:
+    marks_list = list()
+    subject_and_marks_list = dict()
+    subject_list = input(f"Please enter subject name: {subject}")
+    marks_list = input(f"Please enter marks separted by space: {marks}")
+    marks_list = marks.append()
+    subject_and_marks_list[subject] = marks_list
+    print(subject_and_marks_list)
+
+get_subject_and_marks
