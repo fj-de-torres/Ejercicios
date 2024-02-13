@@ -24,22 +24,23 @@ os.system("cls || clear")
 
 ### 3. Opción 3. Me centro en obtener conjuntos (diccionarios) de asignatura - notas.
     ##### 1. I request the user:
-""" 
+
 marks = None
 subject = None
-subject_list = None
-subject_and_marks_list = None
- """
+subject_list = list()
+subject_and_marks_list = dict()
+
 
 def get_subject():
     subject = input("Please, enter subject name: ")
     return subject
 
-def get_marks () -> dict:
+def get_marks () -> list:
     marks_list = list()
     subject_and_marks_list = dict()
     subject = get_subject()
     marks_list = input("Please enter marks separted by space: ").split()
+    
     print(type(marks_list[0]))
     # for mark in marks_list:
     #     marks_list[mark] = float(mark)
