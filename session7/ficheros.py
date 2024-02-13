@@ -15,4 +15,52 @@ def escribir_data(nombre_fichero: str,*mensajes):
     for mensaje in mensajes:
         f.write(f"{mensaje}\n")
     f.close()
-escribir_data('items.txt','Hola','Adiós')
+
+def escribir_data_v2(nombre_fichero: str, *mensajes):
+    with open(f'./data/{nombre_fichero}', 'w') as f:
+        for mensaje in mensajes:
+            f.write(f"{mensaje}\n")
+
+## Lectura:
+#Hay que asegurarse de que existe, si no, daría un error:
+""" 
+def leer_data(nombre_fichero:str) -> str:
+    try:
+        f = open(f"./data/{nombre_fiechero}",'r') # f es una variable local al bloque. Por eso no va a cerrar con f.close. Así que tengo que subir un nivel la declaración de la variable
+        data = f.read()
+    except FileNotFoundError as fnfex:
+        print(fnfex)
+    finally:
+                f.close() #Siempre que acceda a un fiechero con open(), es necesario cerrarlo con close()
+    return data
+ """
+def leer_data(nombre_fichero: str) -> str:
+
+    f = None
+    data = None
+    try:
+        f = open(f"./data/{nombre_fichero}", 'r')
+        data = f.read()
+    except FileNotFoundError as fnfex:
+        print(fnfex)
+    finally:
+        if f: # <= Si existe f
+            f.close()
+
+    return data
+
+def leer_data_v3(nombre_fichero: str) -> str:
+
+    f = None
+    data = None
+    try:
+        with open(f"./data/{nombre_fichero}", 'r') as f:
+            data = f.read()
+    except FileNotFoundError as fnfex:
+        print(fnfex)
+    finally:
+        if f:
+            f.close()
+
+    return data
+
