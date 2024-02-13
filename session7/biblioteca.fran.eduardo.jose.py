@@ -38,7 +38,7 @@ def libros_publicados(libros: dict, filter_year:int) -> dict:
     return diccionario_libros_encontrados   
     #return diccionario_libros_encontrados.update({filter_year : titulos}) #esta estructura no devuelve nada, sino que incorpora al diccionario. La salida de update es None.
 #print(list(libros.values()))
-libros_pedidos = libros_publicados(libros,1950)
+libros_pedidos = libros_publicados(libros,1900)
 print(libros_pedidos)
 
 """ 
