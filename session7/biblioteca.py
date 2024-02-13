@@ -25,7 +25,6 @@ def libros_publicados(libros: dict, year:int) -> dict:
     for _,years in libros.values():
         if int(years) >= int(year):
             return libros.keys()
-        
 
 
 libros_pedidos = libros_publicados(libros,2003)
