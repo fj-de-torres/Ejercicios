@@ -23,6 +23,6 @@ def cargar_asignaturas(num_asignaturas: int) -> dict:
     for _ in range(num_asignaturas):
         asignaturas_local = dict()
         par_asignaura_calificaciones = preguntar_asignaturas()
-        asignaturas_local.update(par_asignaura_calificaciones(calificaciones)
+        asignaturas_local.update(par_asignaura_calificaciones(calificaciones))
 
     return asignaturas_local
