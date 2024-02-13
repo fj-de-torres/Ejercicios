@@ -1,4 +1,4 @@
-# Lamda: funciones anónimas
+# Lambda: funciones anónimas
 
 ```
 def sumar(x:int, y:int) -> int:
