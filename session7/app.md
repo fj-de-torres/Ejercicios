@@ -38,7 +38,7 @@ print(numeros_20_actualizado_v3)
 es_impar = lambda n: n%2 != 0
 numeros_20_impares  = [numero -1 for numero in numeros_20 if numero % 2 != 0]
 ```
-=> numero -1 es simplemente un cálculo que he querido hacer, no tiene nada que ver con el cálculo sobre los impares, que es otra cosa que se pretende aquí. (De un compañero:*con el "numero - 1"  los convierte en par , si un poco confuso que ponga impares y salgan pares :)*)
+numero -1 es simplemente un cálculo que he querido hacer, no tiene nada que ver con el cálculo sobre los impares, que es otra cosa que se pretende aquí. (De un compañero:*con el "numero - 1"  los convierte en par , si un poco confuso que ponga impares y salgan pares :)*)
 numeros_20_impares_v2 = [numero -1 for numero in numeros_20 if es_impar(numero)]
 ```
 print(numeros_20_impares)
