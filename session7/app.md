@@ -81,7 +81,10 @@ Hemos creado, dinámicamente, una estructura partiendo de otra. Otro ejemplo ser
 #### Diccionarios:
 
 ```
-diccionario_alumnas = {alumna[0]:alumna[1] for alumna in alumnas } #*(Or how to understand girl students)*
+diccionario_alumnas = {alumna[0]:alumna[1] for alumna in alumnas } 
+```
+
+*(Or how to understand student girls)*
 
 print(diccionario_alumnas)
 ```
