@@ -36,11 +36,12 @@ def libros_publicados(libros: dict, filter_year:int) -> dict:
     for indice, data in enumerate(libros.values()):
         if data[1] >= filter_year:
             titulos.append(lista_titulos_general[indice])
-        
-    return diccionario_libros_encontrados.update({filter_year : titulos})
+    diccionario_libros_encontrados.update({filter_year:titulos}) 
+    return diccionario_libros_encontrados   
+    #return diccionario_libros_encontrados.update({filter_year : titulos}) #esta estructura no devuelve nada, sino que incorpora al diccionario. La salida de update es None.
 #print(list(libros.values()))
-libros_pedidos = libros_publicados(libros,2003)
-# print(libros_pedidos)
+libros_pedidos = libros_publicados(libros,1950)
+print(libros_pedidos)
 
 """ 
 for indice, letra in enumerate ['a','b','c','d','e']: #No sólo consigo los valores sino también los índices.
