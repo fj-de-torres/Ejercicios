@@ -24,7 +24,7 @@ os.system("cls || clear")
 
 ### 3. Opción 3. Me centro en obtener conjuntos (diccionarios) de asignatura - notas.
     ##### 1. I request the user:
-
+""" 
 marks = None
 subject = None
 subject_list = list()
@@ -40,25 +40,42 @@ def get_marks () -> list:
     subject_and_marks_list = dict()
     subject = get_subject()
     marks_list = input("Please enter marks separted by space: ").split()
-    marks_list_to_floats = list(map(lambda marks_list (float(marks_list))))
+    marks_list_floated = list(map(lambda lista_notas :float(lista_notas),marks_list))
+    print(marks_list_floated)
+    #Alternative way of turning the list of string marks into float:
+    for indice,nota in enumerate(marks_list):
+        marks_list[indice] = float(nota)
+        print(indice,type(marks_list[indice]),marks_list[indice])
 
-    
-    print(marks_list)
-    # for mark in marks_list:
-    #     marks_list[mark] = float(mark)
-    #print(type(marks_list))
-    #marks_list = marks_list.append(marks)
+def link_subject_marks(subject:str,marks_list:tuple) -> dict:
     subject_and_marks_list[subject] = marks_list
-    print(marks_list)
-    print(subject_and_marks_list)
+    # print(marks_list)
+    # print(subject_and_marks_list)
     return subject_and_marks_list
 
-subject_and_marks_list = get_marks()
-def marks_average(subject_and_marks_list:dict,subject:str) -> float:
+def marks_average(subject:str) -> float:
     marks = subject_and_marks_list[subject]
     suma = sum(marks)
     marks_number = len(marks)
     return suma / marks_number
 
+subject = get_subject()
+marks_list = get_marks()
+print(link_subject_marks(subject,marks_list))
 print(subject_and_marks_list)
-print(marks_average(subject_and_marks_list,"lengua"))
+#print(marks_average(subject_and_marks_list,"lengua"))
+ """
+#Create diccionary pair subject <-> marks list: I request the user to enter the name of a subject followed by a list of marks separated by spaces:
+class_dictionary = dict()
+def subject_marks_dic(subject:str,marks_list:list) -> dict:
+    subject = input("Please enter subject name: ")
+    marks_list = input("Please enter marks separated by one space:")
+    marks_floated_list = list(map(lambda marks : float(marks),marks_list))
+    class_dictionary.update{subject : marks_floated_list}
+    return class_dictionary
+
+def marks_average(marks_dictionary:dict) -> float:
+    marks = marks_dictionary.values()
+    marks_average = lambda class_dictionary : sum(marks)/len(marks)
+    return marks_average
+

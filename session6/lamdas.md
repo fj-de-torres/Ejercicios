@@ -4,10 +4,7 @@
 def sumar(x:int, y:int) -> int:
 return x + y
 ```
-```
-def cacular_algo_complejo():
-return 10
-```
+
 ```
 lambda x, y : x + y
 ```
@@ -19,6 +16,12 @@ No puedo tipar las variables *(x: int, y:int)*, etc.
 ```
 r1 = sumar_lambda(10,3)
 r2 = sumar(10,3)
+```
+```
+def cacular_algo_complejo():
+return 10
+```
+```
 print(r1 == r2)
 sumar_lamda2 = lambda x, y : calcular_algo_complejo()
 ```
@@ -28,7 +31,7 @@ De esta manera, podría definir funciones lambda de más de una línea de códig
 ##### Otro ejemplo:
 
 ```
-def calcular(x:int, y: int, d:dict):
+def calcular(x:int, y: int):
 proceso1 = lambda a, b :a * x + b * y
 res = proceso1(10,1)
 ```
