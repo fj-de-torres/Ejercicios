@@ -40,6 +40,9 @@ def get_marks () -> dict:
     subject_and_marks_list = dict()
     subject = get_subject()
     marks_list = input("Please enter marks separted by space: ").split()
+    print(type(marks_list[0]))
+    # for mark in marks_list:
+    #     marks_list[mark] = float(mark)
     #print(type(marks_list))
     #marks_list = marks_list.append(marks)
     subject_and_marks_list[subject] = marks_list
