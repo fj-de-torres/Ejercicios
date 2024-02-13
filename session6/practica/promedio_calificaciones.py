@@ -40,8 +40,10 @@ def get_marks () -> list:
     subject_and_marks_list = dict()
     subject = get_subject()
     marks_list = input("Please enter marks separted by space: ").split()
+    marks_list_to_floats = list(map(lambda marks_list (float(marks_list))))
+
     
-    print(type(marks_list[0]))
+    print(marks_list)
     # for mark in marks_list:
     #     marks_list[mark] = float(mark)
     #print(type(marks_list))
