@@ -20,12 +20,30 @@ libros = {
     "El Principito": ("Antonio de Saint-Exupéry",1943),
     "El Quijote": ("Miguel_de_Cervantes", 1605),
 }
-
-def libros_publicados(libros: dict, year:int) -> dict:
-    for _,years in libros.values():
-        if int(years) >= int(year):
-            return libros.keys()
-
-
+""" 
+def libros_publicados(libros: dict, filter_year:int) -> dict:
+    diccionario_.libros_encontrados = dict()
+    lista_titulos = list(libros.keys()) 
+    for _,year in list(libros.values()):
+        if year >= filter_year:
+            lista_titulos.append()
+    return diccionario_libros_encontrados.update({year : []})
+ """
+def libros_publicados(libros: dict, filter_year:int) -> dict:
+    diccionario_libros_encontrados = dict()
+    lista_titulos_general = list(libros.keys())# => aquí sí quiero que sea una lista
+    titulos = []
+    for indice, data in enumerate(libros.values()):
+        if data[1] >= filter_year:
+            titulos.append(lista_titulos_general[indice])
+        
+    return diccionario_libros_encontrados.update({filter_year : titulos})
+#print(list(libros.values()))
 libros_pedidos = libros_publicados(libros,2003)
-print(libros_pedidos)
+# print(libros_pedidos)
+
+""" 
+for indice, letra in enumerate ['a','b','c','d','e']: #No sólo consigo los valores sino también los índices.
+    print(indice,letra) 
+    #0 a
+    #1 b ... """
