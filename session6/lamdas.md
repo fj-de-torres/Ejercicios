@@ -1,15 +1,23 @@
 # Lamda: funciones anónimas:
 
 ```
-def sumar(x:int, y:int) -> int:return x + y
+def sumar(x:int, y:int) -> int:
+return x + y
+```
+```
 def cacular_algo_complejo():
 return 10
-lambda x, y : x + y # Equivale a lo anterior, pero de momento es una función anónima. No tiene nombresumar_lambda = lambda x, y : x + y #No puedo tipar las variables x: int, y:int, etc.r1 = sumar_lambda(10,3)
+```
+```
+lambda x, y : x + y # Equivale a lo anterior, pero de momento es una función anónima. No tiene nombre:
+```
+```
+sumar_lambda = lambda x, y : x + y #No puedo tipar las variables x: int, y:int, etc.r1 = sumar_lambda(10,3)
 r2 = sumar(10,3)print(r1 == r2)
 sumar_lamda2 = lambda x, y : calcular_algo_complejo()
 ```
 
-De esta manera, podría definir funciones lamda de más de una línea de código, pouesto que en su única línea de código estoy invocando una función que sí que tiene más de una línea.
+De esta manera, podría definir funciones lambda de más de una línea de código, puesto que en su única línea de código estoy invocando una función que sí que tiene más de una línea.
 
 ##### Otro ejemplo:
 
