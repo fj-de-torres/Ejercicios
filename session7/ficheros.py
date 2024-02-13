@@ -58,9 +58,6 @@ def leer_data_v3(nombre_fichero: str) -> str:
             data = f.read()
     except FileNotFoundError as fnfex:
         print(fnfex)
-    finally:
-        if f:
-            f.close()
 
     return data
 
