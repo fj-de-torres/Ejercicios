@@ -7,6 +7,6 @@ for digito in digitos:
         numero = float(digito)
         numeros.append(numero)
     except Exception:
-        co
+        continue
 
 print(numeros)
