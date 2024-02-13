@@ -1,3 +1,4 @@
+#Eduardo Gómez García, José Méndez Carnero y Francisco José de Torres Sánchez-Simón
 """
 # *Enunciado: Biblioteca
 Imagina que tienes un diccionario que almacena información sobre libros en una biblioteca. Cada clave del diccionario es el título del libro (una cadena de texto), y el valor es una tupla que contiene el nombre del autor y el año de publicación.
@@ -22,7 +23,7 @@ libros = {
 
 def libros_publicados(libros: dict, year:int) -> dict:
     for _,years in libros.values():
-        if int(years) >= year:
+        if int(years) >= int(year):
             return libros.keys()
         
 
