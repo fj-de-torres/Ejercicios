@@ -1,6 +1,8 @@
 import os
 from ficheros import leer_data
 import transformers as trans
+from gestion_alumnos import matricular, modificar
+
 
 def mostrar_alumnos(l_alumnos: str) -> list:
     lista_alumnos = list()
@@ -24,6 +26,12 @@ if __name__ == "__main__":
 #Esto ha de estar en el programa principal
 #crear una lista de tuplas formadas por el nombre y el apellido
 #['a b', 'c d', 'e f'] -> [('a','b'),('c','d'),('e','f')]
-print(trans.transformar_data(nombre_alumnos))   
-
+#print(trans.transformar_data(nombre_alumnos))   
     
+    
+alumnos = trans.transformar_data(nombre_alumnos)
+
+print(f"ANTES de MAT:{alumnos}")
+matricular(('Fabio','Scanferla'),alumnos)
+print(f"DESPUES de MAT: {alumnos}")
+alumnos = modificar(('Luis','Albert)'),('Luis','Alberto'), alumnos)
