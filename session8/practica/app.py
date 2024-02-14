@@ -1,8 +1,6 @@
 import os
 from file_management import *
 from colorama import Fore,Back,Style
-ruta_directorio = os.path.dirname(__file__)
-
 
 os.system("cls || clear")
 
