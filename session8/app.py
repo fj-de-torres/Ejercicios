@@ -1,5 +1,6 @@
 import os
 from ficheros import leer_data
+import transformers as trans
 
 def mostrar_alumnos(l_alumnos: str) -> list:
     lista_alumnos = list()
@@ -18,3 +19,11 @@ if __name__ == "__main__":
 ##### Crear una lista de tuplas, cada una formadas por el nombre y el apellido:
 
     print(mostrar_alumnos(nombre_alumnos))
+
+## Solución del profesor:
+#Esto ha de estar en el programa principal
+#crear una lista de tuplas formadas por el nombre y el apellido
+#['a b', 'c d', 'e f'] -> [('a','b'),('c','d'),('e','f')]
+print(trans.transformar_data(nombre_alumnos))   
+
+    
