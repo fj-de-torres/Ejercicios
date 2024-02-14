@@ -1,5 +1,6 @@
 #CRUD -> Create, Read, Update, Delete
-
+def obtener_alumnos(l_alumnos: list) -> str:
+    return ", ".join([" ".join(alumno) for alumno in l_alumnos])
 #Deberíamos tener una función buscar_alumno:
 def buscar(alumno:tuple, l_alumnos:list) -> tuple:
     posicion_alumno = None #(parto por defecto del echo de que no esté)
@@ -65,7 +66,7 @@ def modificar(alumno: tuple, alumno_modificado: tuple, l_alumnos: list):
 def dar_de_baja(alumno: tuple, l_alumnos: list):
     index = buscar_indice(alumno,l_alumnos)
     alumno_borrado = l_alumnos.drop(index)
-    return l_alumnos
+    return list(alumno_borrado,l_alumnos)
 
 def mostrar(alumno: tuple, l_alumnos: list) -> tuple:
     index = buscar_indice(alumno,l_alumnos)
@@ -73,3 +74,20 @@ def mostrar(alumno: tuple, l_alumnos: list) -> tuple:
     print(alumno_a_mostrar)
     return alumno_a_mostrar
 
+
+## La solución del profesor:
+# ('a','b') -> ('a , ')
+def mostrar(l_alumnos:list) -> str: #Queremos que el resultado sea una cadena que luego podemos imprimir en la invocación
+    #Nos gustaría este tipo de cadena: Luis Gomez, Pedro Gomez teniendo en cuenta que la salida inicial es de tipo [(Juan,Gomez)]
+    return ", ".join([" ".join(alumno) for alumno in l_alumnos])# -> está bien hacer el join si le paso cadenas
+
+def dar_de_baja(alumno: tuple, l_alumnos: list) -> list:
+    return [al for al in l_alumnos if al != alumno]
+    return list(filter(lambda al: al != alumno, l_alumnos))
+
+def modificar(alumno: tuple, alumno_modificado: tuple, l_alumnos: list):
+    posicion = buscar_indice(alumno, l_alumnos)
+    if posicion is not None:
+        l_alumnos[posicion] = alumno_modificado    
+    
+    return l_alumnos
