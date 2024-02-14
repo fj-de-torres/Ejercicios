@@ -7,6 +7,7 @@ def lectura_fichero (nombre_archivo:str) -> list:
     try:
         with open(f"{ruta_directorio}/{nombre_archivo}",'r') as archivo:
             for linea in archivo:
-                read_data.append(linea.split(","))
+                partes = linea.split(",")
+                
 
 
