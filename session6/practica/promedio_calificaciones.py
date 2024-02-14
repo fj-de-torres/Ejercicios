@@ -46,7 +46,7 @@ def get_marks () -> list:
     for indice,nota in enumerate(marks_list):
         marks_list[indice] = float(nota)
         print(indice,type(marks_list[indice]),marks_list[indice])
-
+(#https://realpython.com/python-enumerate/)
 def link_subject_marks(subject:str,marks_list:tuple) -> dict:
     subject_and_marks_list[subject] = marks_list
     # print(marks_list)
