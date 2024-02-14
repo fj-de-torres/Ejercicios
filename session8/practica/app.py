@@ -1,13 +1,18 @@
 import os
+from file_management import *
+from colorama import Fore,Back,Style
 ruta_directorio = os.path.dirname(__file__)
 
-def lectura_fichero (nombre_archivo:str) -> list:
-    archivo = None
-    read_data = list()
-    try:
-        with open(f"{ruta_directorio}/{nombre_archivo}",'r') as archivo:
-            for linea in archivo:
-                partes = linea.split(",")
-                
+
+os.system("cls || clear")
+
+file_reading_message =Style.BRIGHT + "Tasks on your list at this point are: " + Style.NORMAL + "\n"
+
+tareas = lectura_fichero("tareas.txt")
+if len(tareas) == 0:
+     tareas_list = Fore.RED + "None!" + Style.RESET_ALL
+else:
+     tareas_list = tareas
+print(file_reading_message + f"{tareas_list}")
 
 
