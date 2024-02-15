@@ -1,0 +1,15 @@
+[
+    {
+        "marca": "Seat",
+        "modelo": "Arkana"
+    },
+    {
+        "marca": "Seat",
+        "modelo": "Leon"
+    },
+    {
+        "marca": "Seat",
+        "modelo": "Berlingo"
+    },
+]
+//Esto para python es una lista de diccionarios.
