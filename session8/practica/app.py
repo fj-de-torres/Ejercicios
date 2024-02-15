@@ -3,14 +3,14 @@ from file_management import *
 from colorama import Fore,Back,Style
 
 os.system("cls || clear")
+if __name__ == "__main__":
+     file_reading_message =Style.BRIGHT + "Tasks on your list at this point are: " + Style.NORMAL + "\n"
 
-file_reading_message =Style.BRIGHT + "Tasks on your list at this point are: " + Style.NORMAL + "\n"
-
-tareas = lectura_fichero("tareas.txt")
-if len(tareas) == 0:
-     tareas_list = Fore.RED + "None!" + Style.RESET_ALL
-else:
-     tareas_list = tareas
-print(file_reading_message + f"{tareas_list}")
+     tareas = lectura_fichero("tareas.txt")
+     if len(tareas) == 0:
+          tareas_list = Fore.RED + "None!" + Style.RESET_ALL
+     else:
+          tareas_list = tareas
+     print(file_reading_message + f"{tareas_list}")
 
 
