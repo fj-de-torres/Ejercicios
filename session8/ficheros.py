@@ -27,7 +27,7 @@ def leer_data(nombre_fichero: str) -> str:
     data = None
     try:
         archivo open(f"{ruta_directorio}/data/{nombre_fichero}", 'r')
-            data = sanitizar_data(f.readlines()) #Y esto devolverá una lísta de lo leído en cada línea
+        data = sanitizar_data(f.readlines()) #Y esto devolverá una lísta de lo leído en cada línea
 
     except FileNotFoundError as fnfex:
         print(fnfex)

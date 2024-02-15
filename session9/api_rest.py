@@ -16,8 +16,9 @@ os.system("cls || clear")
 """
 #Aún no es una respuesta json sino de cadenas:
 def obtener_usuarios (url:str):
-    response = requests.get()
+    response = requests.get(url)
     data = response.json()
+    return data
     # print(data)
     # print(len(data))
 
@@ -31,4 +32,18 @@ print(response.text)
 
 ### Bajar los usuarios y guardarlos en un fichero en formato csv (id, username, email, website):
 
-obtener_usuarios('https://jsonplaceholder.typicode.com/users/1')
+def create_csv(file_to_open:str):
+    head = ['id' , 'username' , 'email' , 'website']
+    #file_to_open = input("Enter name for csv file with relative path: ")
+    first_line = None
+    with open (file_to_open,'r') as file_csv:
+        first_line = file_csv.readlines()[0]
+
+    if first_line != head:
+        with open (file_to_open,'w') as file_csv:
+            file_csv.write(f"{head}\n")
+
+print(obtener_usuarios('https://jsonplaceholder.typicode.com/users/1'))
+create_csv('data/user.csv')
+
+
