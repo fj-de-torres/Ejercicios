@@ -51,7 +51,7 @@ def matricular(alumno: tuple, l_alumnos: list):
 
 def buscar_indice(alumno: tuple, l_alumnos: list) -> int:
     posicion_alumno = None
-    for index, al in enumerate(l_alumnos):
+    for index, al in enumerate(l_alumnos): #Puedo hacer for index, al in enumerate (l_alumnos, start = 1) y así no empezar necesariamente por el primer elemento.
         if al == alumno:
             posicion_alumno = index  
     return posicion_alumno
