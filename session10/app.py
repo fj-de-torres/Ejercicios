@@ -3,16 +3,27 @@ import os
 os.system("cls || clear")
 #Moveré las clases a módulos. Es decir, archivos distintos.
 #Las clases se crean con la palabra reservada class. La convención es que sus nombre empienzan en mayúsculas:
+
+class Asignatura:
+    def __init__(self, nombre:str, nota_corte: float):
+        self.nombre = nombre
+        self.nota_corte = nota_corte
+
+    def esta_aprobada(self, nota_alumno: float) -> bool:
+        return nota_alumno >= self.nota_corte   
+
 class Alumno:
     def __init__(self,nombre:str, edad: int, num_estudiante:int):
         self.nombre = nombre
         self.edad = edad
         self.num_estudiante = num_estudiante
+        self.asignaturas = list()
 
 class Curso:
     def __init__(self,nombre:str):
         self.nombre = nombre
         self.alumnos = list()
+    #Si usamos append, entonces vamos a agregar una lista dentro de otra lista. Es decir, nuestra lista inicial de alumnos sería una lista, y luego el append nos añadiría los datos como una lista entera dentro de la que ya teníamos.
     """
     def matricular(self, alumno:Alumno):
         if alumno is None: return
@@ -24,7 +35,7 @@ class Curso:
         #self.alumnos.extend = [alumno for alumno in alumnos] *alternativa 2*
         #self.alumnos = self.alumnos + [alumno for alumno in alumnos] *Alternativa 3*
         #self.alumnos = self.alumnos + list(alumnos) *Alternativa 4*
-        #Si usamos append, entonces vamos a agregar una lista dentro de otra lista. Es decir, nuestra lista inicial de alumnos sería una lista, y luego el append nos añadiría los datos como una lista entera dentro de la que ya teníamos.
+        
     def listar_alumnos(self):
         print("-" * 25, self.nombre, "-" * 25)
         for alumno in self.alumnos:
