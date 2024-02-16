@@ -69,3 +69,7 @@ b = 2
 Si tengo ([1,2]) y necesito (1,2)
 quiero eliminar (dejar volar todo lo que hay dentro de la tupla. La tupla no "volará" porque es fija)
 """
+
+## Crear los cambios necesarios para poder ejecutar esto:
+    #Es decir, centralizar las funciones a través de la escuela. Es decir, unificando en Escuela, todas las operaciones
+pue.crear_cursos("PCAP1","PCAP2")
