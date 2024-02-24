@@ -1,4 +1,5 @@
 ﻿from time import sleep
+from os import system
 def division():
     try:
         x = int(input("Ingresa un numero: "))
@@ -9,6 +10,7 @@ def division():
     except ValueError:
         print("Debes ingresar un valor entero.")
     except KeyboardInterrupt:
+        system("cls || clear")
         print("¡Vamos, no me jodas!")
         sleep(1)
         division()
