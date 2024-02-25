@@ -7,10 +7,10 @@ class Person:
         self.age = age
         self.__person_dict = {}
 
-    def __str__(self):**
+    def __str__(self):
         return "{"+f"\'name':{self.name},'age':{self.age}"+"}"
     
-    def dicionary(self):**
+    def dicionary(self):
         self.__person_dict['name'] = self.name
         self.__person_dict['age'] = self.age
 ```
@@ -40,10 +40,10 @@ class Person:
         self.age = age
         self.__person_dict = {}
 
-    def __str__(self):**
+    def __str__(self):
         return "{" + f"'name': {self.name}, 'age': {self.age}" + "}"
 
-    def dicionary(self):**
+    def dicionary(self):
         self.__person_dict['name'] = self.name
         self.__person_dict['age'] = self.age
         return self.__person_dict  # Return the modified dictionary
@@ -99,7 +99,7 @@ Certainly! Let's demystify the concept of self in Python. Imagine you're in a ro
     - When you're in the room (inside a method), you want to refer to yourself (the instance).
     - You say, "Hey, mirror! Tell me about my name and age."
     - In Python, we use self to refer to the instance (the mirror).
-- **Why Not Just Use "Me"?
+- **Why Not Just Use "Me"?**
     - Well, Python doesn't have a magical way to know which instance you're talking about.
     - So, you explicitly say, "Mirror (self), show me my name and age!"
     - It's like saying, "Hey, self, tell me your secrets!"
@@ -137,7 +137,7 @@ No worries! Let's break it down further. Imagine you're in a magical room with a
     - When you're inside the room (inside a method), you want to talk to the mirror (object).
     - You say, "Hey, mirror (object)! Tell me your name and age."
     - In Python, we use the special word self to refer to the object (mirror).
-- **Why "self"?
+- **Why "self"?**
     - Python doesn't know which object you're talking about unless you explicitly say it.
     - So, you say, "Mirror (self), show me your secrets!"
     - self is like a secret code that connects you to the right mirror (object).
@@ -166,7 +166,7 @@ Certainly! Let's demystify the concept of self in Python without the mirror anal
     - Inside the house (a method), you want to refer to specific things within that house.
     - You say, "Hey, house (instance)! Tell me your color and number of rooms."
     - In Python, we use self to refer to the specific house (instance).
-- **Why "self"?
+- **Why "self"?**
     - Python doesn't magically know which house you're talking about.
     - So, you explicitly say, "House (self), show me your secrets!"
     - self connects you to the right house (instance).
@@ -247,7 +247,7 @@ class Person:
     def set_name(self, name):
         self.name = name
 
-    def greet(self):**
+    def greet(self):
         return f"Hello, my name is {self.name}."
 
 # Create an instance of Person
@@ -306,7 +306,7 @@ class Person:
     def set_name(self, name):
         self.name = name
 
-    def greet(self):**
+    def greet(self):
         return f"Hello, my name is {self.name}."
 
 # Create an instance of Person
