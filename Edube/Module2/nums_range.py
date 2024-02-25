@@ -18,6 +18,8 @@ def read_int(mini:int, maxi:int) -> int:
     except ValueError:
         print(Style.BRIGHT + 'Horror:', Style.RESET_ALL + 'entrada incorrecta')
         exit()
+    except:
+        print("WhateverError on line somewhere")
 
 v = read_int(-10, 100)
 if v % 5 == 0 and v % 10 !=0 :
