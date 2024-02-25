@@ -1,5 +1,5 @@
 ## User
-I am learning OOP in python. I have the following class defined:**
+I am learning OOP in python. I have the following class defined:
 ```
 class Person:
     def __init__(self,name,age):
