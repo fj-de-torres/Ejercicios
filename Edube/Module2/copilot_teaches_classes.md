@@ -506,3 +506,71 @@ print(obj2.x)  # Prints 5
     - If you want different instances to have different initial values (attributes), use __init__.
     - With __init__, you can customize each object's state during creation.
     In summary, using __init__ allows you to create more flexible and customized objects, while not using it results in instances that share the same initial attributes. Choose based on your specific needs! 🐍
+
+## User
+acording to the latter, in the following code:
+```
+class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
+
+
+stack_object = Stack()
+
+stack_object.push(3)
+stack_object.push(2)
+stack_object.push(1)
+
+print(stack_object.pop())
+print(stack_object.pop())
+print(stack_object.pop())
+```
+To create a stack through creating objects, can I skip the init: function and just write stack_list = [] to make every object start with an empty list that will later on filling with the push method?
+
+## Bing
+Certainly! Let's discuss the implications of skipping the __init__ method and directly initializing an attribute outside of it.
+In your original code, you have the __init__ method that initializes the __stack_list attribute to an empty list when you create an instance of the Stack class. This ensures that every object starts with an empty stack.
+However, if you choose to skip the __init__ method and directly initialize the __stack_list attribute outside of it (like stack_list = []), here's what happens:
+- Class-Level Attribute:
+    - When you define an attribute directly in the class (outside any method), it becomes a class-level attribute.
+    - Class-level attributes are shared by all instances of the class.
+    - In your case, stack_list would be the same for all Stack objects.
+- Shared State:
+    - If you create multiple Stack objects, they will all share the same stack_list.
+    - Any changes made to stack_list in one object will affect all other objects.
+- Example:
+```
+class Stack:
+    stack_list = []  # Class-level attribute
+
+    def push(self, val):
+        self.stack_list.append(val)
+
+    def pop(self):
+        val = self.stack_list[-1]
+        del self.stack_list[-1]
+        return val
+
+stack_object1 = Stack()
+stack_object2 = Stack()
+
+stack_object1.push(3)
+stack_object2.push(2)
+
+print(stack_object1.pop())  # Prints 2 (because stack_list is shared)
+```
+- Conclusion:
+    - While this approach works, it's not ideal for maintaining separate state for each instance.
+    - Using __init__ allows you to create unique attributes for each object.
+    - If you want each stack to have its own independent list, stick with the __init__ method.
+In summary, skipping __init__ and directly initializing class-level attributes can lead to shared state among instances. For independent state, use __init__ to set instance-specific attributes. 🐍
