@@ -24,7 +24,7 @@ Como propiedad, la nombro sin paréntesis, es decir, NO como un método.
         return self.__nombre
  
 #### SETTER: puedo así modificar esos atributos que he definido como ocultos):
-###### No puede haber un SETTER sin un GETTER:
+###### No puede haber un GETTER sin un SETTER:
 
 ```
     @nombre.setter

@@ -16,7 +16,7 @@ class Alumno:
         return self.__nombre
     
     #SETTER (puedo así modificar esos atributos que he definido como ocultos):
-    #No puede haber un SETTER sin un GETTER.
+    #No puede haber un GETTER sin un SETTER.
     @nombre.setter
     def nombre(self,nuevo_nombre:str):
         self.__nombre = nuevo_nombre
