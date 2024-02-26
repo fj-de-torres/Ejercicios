@@ -1,0 +1,23 @@
+#dominio: gestion academica
+
+class Alumno:
+    #datos (atributos, estado)
+    def __init__(self, indent: str, nombre: str, apellido: str, curso: int ):
+        self.identificador = indent
+        self.nombre = nombre
+        self.apellido = apellido
+        self.curso = curso
+        self.notas = []
+    #comportamiento (responsabilidad)
+        
+
+#RD - lista Alumnos
+juan = Alumno(1, 'Juan', 'Perez',1) #instaciar
+clase = [juan, Alumno(2,'Maria','Pelaez',1)]
+
+#CRUD
+def matricular(indent: str, nombre: str, apellido: str, curso: int, l_alumnos: list[Alumno]):
+    l_alumnos.append(Alumno(indent, nombre, apellido, curso))
+
+matricular(3,'Koldo','Lopez',1, clase)
+print(clase)
