@@ -56,6 +56,16 @@ def matricular(indent:int, nombre: str, apellido:str, curso:str, l_alumnos:list)
     l_alumnos.append(Alumno(indent,nombre, apellido, curso))
 
 matricular (3,'Koldo','Lopez',1,clase)
+
+mostrar_alumnos(curso)
+
+print("_"* 40)
+
+matricular(1, 'Maria','Lopex',1, curso)
+
 print(clase)
 ```
 Me creo una carpeta "package". Si en esta carpepta pongo un archivo llamado: __init__.py, esta carpeta se convierte en un package. Dentro de ella, pondré módulo.
+
+### Nueva versión:
+
