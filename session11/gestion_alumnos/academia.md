@@ -1,15 +1,21 @@
-from gestion_alumnos.curso import Curso
-#class Academia:
-    #datos
+# Clase Academia:
+
+###### datos
    
 
-    # #comportamiento:
+###### comportamiento
+
+```
     # def matricular_alumnos(*alumnos: tuple, curso):
     #     curso.alumnos = list(alumnos)
 
-    #     #[matricular() for alumno in alumnos ]#Porque matricular() matricular uno, a uno. También le paso el curso al cual se van a matricular
+    #     #[matricular() for alumno in alumnos ]
+```
 
-#from gestion_alumnos.curso import Curso
+Porque matricular(), matricula uno, a uno. También le paso el curso al cual se van a matricular
+
+```
+from gestion_alumnos.curso import Curso
 
 class Academia:
 
