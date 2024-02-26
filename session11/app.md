@@ -5,10 +5,11 @@
 
 #Lista:
 
-lista = list()
+```lista = list()```
+
 
 #### CRUD (Create, Read, Update and Delete):
-''''
+
 ```
 - del lista[pos] #La más adecuada si me dan la posición
 
@@ -19,4 +20,4 @@ lista = list()
 - def borrar_elemento(pos:int, lista:list)
     del lista[pos]
 ```
- '''
+
