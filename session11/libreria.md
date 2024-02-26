@@ -1,3 +1,6 @@
+# Clase librería:
+
+```
 from libro import Libro
 
 class Libreria:
@@ -13,3 +16,4 @@ class Libreria:
     
     def __getitem__(self, pos: int):
         return self.__libros[pos]
+```

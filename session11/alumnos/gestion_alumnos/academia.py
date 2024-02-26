@@ -1,4 +1,4 @@
-from alumnos.gestion_alumnos.curso import Curso
+from gestion_alumnos.curso import Curso
 #class Academia:
     #datos
 

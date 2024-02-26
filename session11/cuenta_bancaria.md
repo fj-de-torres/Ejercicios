@@ -1,3 +1,6 @@
+# Clase Cuenta_Bancaria:
+
+```
 class Cuenta_Bancaria:
     #getters
     @property
@@ -19,3 +22,4 @@ class Cuenta_Bancaria:
             self.__saldo -= cantidad
         else:
             raise Exception("No hay saldo suficiente")
+```
