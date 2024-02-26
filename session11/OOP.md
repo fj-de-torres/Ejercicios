@@ -85,3 +85,9 @@ if __name__ == "__main__":
 
     curso.realizar_examen()
 ```
+Defino un alumno:
+```
+juan = Alumno(1,'Juan', '',1)
+#Ahora puedo acceder a los datos de Juan:
+juan.curso #(por ejemplo)
+```
