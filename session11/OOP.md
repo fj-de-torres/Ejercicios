@@ -69,3 +69,19 @@ Me creo una carpeta "package". Si en esta carpepta pongo un archivo llamado: __i
 
 ### Nueva versión:
 
+```
+
+if __name__ == "__main__":
+    
+    academia = Academia()
+    curso = Curso(1, 'Luis Garcia')
+
+    academia.matricular_alumnos(curso, Alumno(1,'Koldo','Lopez',1), Alumno(2,'Maria','Lopez',1))
+    
+    mostrar_alumnos(curso)
+    print("_" * 40)
+    matricular(1,'Maria','Lopez',1, curso)
+    mostrar_alumnos(curso)
+
+    curso.realizar_examen()
+```

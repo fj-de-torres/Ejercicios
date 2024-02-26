@@ -4,13 +4,11 @@ from gestion_alumnos.curso import Curso
 
 if __name__ == "__main__":
     
+    academia = Academia()
     curso = Curso(1, 'Luis Garcia')
-    
-    matricular(3,'Koldo','Lopez',1, curso)
-    #print(clase)
-    mostrar_alumnos(curso)
-    print("_" * 40)
-    matricular(1,'Maria','Lopez',1, curso)
-    mostrar_alumnos(curso)
 
+    academia.matricular_alumnos(curso, Alumno(1,'Koldo','Lopez',1), Alumno(2,'Maria','Lopez',1))
+    
+    curso.listar_alumnos(curso)
+    
     curso.realizar_examen()
