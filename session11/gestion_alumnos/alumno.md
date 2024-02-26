@@ -1,3 +1,6 @@
+# Clase alumno:
+
+```
 class Alumno:
     #datos (atributos, estado)
     def __init__(self, indent: str, nombre: str, apellido: str, curso: int ):
@@ -6,17 +9,22 @@ class Alumno:
         self.__apellido = apellido
         self.__curso = curso
         self.__notas = []
-    #getters y setters:
-    #Métodos que nos permiten acceder a las propiedades (atributos):
+```
 
+## getters y setters:
+#### Métodos que nos permiten acceder a las propiedades (atributos):
+
+```
     @property    
     #Como propiedad, la nombro sin paréntesis, es decir, NO como un método.
     #GETTER:
     def nombre(self) -> str:
         return self.__nombre
-    
-    #SETTER (puedo así modificar esos atributos que he definido como ocultos):
-    #No puede haber un SETTER sin un GETTER.
+ ```
+#### SETTER: puedo así modificar esos atributos que he definido como ocultos):
+###### No puede haber un SETTER sin un GETTER:
+
+```
     @nombre.setter
     def nombre(self,nuevo_nombre:str):
         self.__nombre = nuevo_nombre
@@ -32,5 +40,7 @@ class Alumno:
     
     #metodo magico
     def __str__(self):
-        return f"{self.__nombre} {self.__apellido}"  
+        return f"{self.__nombre} {self.__apellido}"
+```
+
         

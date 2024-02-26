@@ -1,3 +1,6 @@
+#### Clase curso:
+
+```
 class Curso:
     
     def __init__(self, numero, tutor) -> None:
@@ -12,3 +15,4 @@ class Curso:
     def listar_alumnos(self):
         for alumno in self.alumnos:
             print(alumno)
+```
