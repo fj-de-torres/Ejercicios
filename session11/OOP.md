@@ -35,6 +35,8 @@ class Alumno:
 
     def examinar(self):
         print("Examinanddo...")
+```
+
 #### Método mágico:
 ```
         def __str__(self):
