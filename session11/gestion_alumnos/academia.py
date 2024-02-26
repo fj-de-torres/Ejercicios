@@ -1,7 +1,7 @@
 from gestion_alumnos.curso import Curso
 #class Academia:
     #datos
-   
+
 
     # #comportamiento:
     # def matricular_alumnos(*alumnos: tuple, curso):
