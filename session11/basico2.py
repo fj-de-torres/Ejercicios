@@ -1,5 +1,5 @@
 class CuentaBancaria:
-    def __init__(self,titular,saldo_inicial:float):
+    def __init__(self,titular:str ,saldo_inicial:float):
         self.__saldo = float(saldo_inicial)
         self.__titular = titular
 
@@ -25,3 +25,5 @@ class CuentaBancaria:
 
     def realizar_retiro(self,cantidad_a_retirar:float):
         self.__saldo -= cantidad_a_retirar
+        #Aquí tengo que contemplar la posibilidad de que haya un intento de retirar más de lo que hay
+        
