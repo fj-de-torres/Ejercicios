@@ -30,6 +30,7 @@ class Documento:
         #atributo (privado)
         self.__titulo = titulo
         self.__autor = autor
+        Documento.numero_documentos += 1 
 
     def imprimir(self):
         pass
@@ -44,6 +45,7 @@ class Documento:
 
 
 
+"""
 documento_word = Documento.obtener_documento_informado('Pedro Perez')
 print(documento_word.autor, documento_word.titulo, sep="--")
 
@@ -63,7 +65,12 @@ print (documento2.numero_documentos)
 
 print (documento_word.numero_documentos)
 
+"""
 
+documento1 = Documento('Valores bursatiles', 'Joshua')
+print(Documento.numero_documentos)
+documento2 = Documento('Parrila TV', 'Pedro')
+print(Documento.numero_documentos)
 
 
 quijote = Libro("Don Quijote de la Mancha")

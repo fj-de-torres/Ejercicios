@@ -33,6 +33,7 @@ class Documento:
     def __init__(self, titulo:str, autor: str):
         self.__titulo = titulo
         self.__autor = autor
+        Documento.numero_documentos += 1 
 
     def imprimir(self):
         pass
@@ -86,4 +87,18 @@ print(documento_word.numero_documentos)
 
 Es decir, es un valor que comparten todas las instancias.
 Cuando una instancia cambia el atributo de clase, se convierte en atributo de instancia, y no modifica el común de la clase. Cuando se cambia el atributo desde la clase, se cambia en todas las instancias. Si lo cambia una instancia, ya se convierte en privado para esa instancia.
+```
+documento1 = Documento('Valores bursatiles', 'Joshua')
+print(Documento.numero_documentos)
+documento2 = Documento('Parrila TV', 'Pedro')
+print(Documento.numero_documentos)
+documento3 = Documento.obtener_documento_informado('Juan')
+print(Documento.numero_documentos)
+```
+Resultado:
+
+> y
+> 1
+> 2
+> 3
 
