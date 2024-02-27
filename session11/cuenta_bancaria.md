@@ -10,7 +10,9 @@ class Cuenta_Bancaria:
     def __init__(self, saldo: float, titular: str) -> None:
         self.__saldo = saldo
         self._titulsar = titular
-    
+```
+Estas son las responsabilidades de la clase:
+```
     def obtener_saldo(self) -> float:
         return self.__saldo
     
