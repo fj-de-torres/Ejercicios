@@ -17,14 +17,28 @@ class Documento:
     @titulo.setter
     def titulo(self, nuevo_titulo: str):
         self.__titulo = nuevo_titulo
+
+    @property
+    def autor(self):
+        return self.__autor
+        
     
-    def __init__(self, titulo:str):
+    def __init__(self, titulo:str, autor: str):
         self.__titulo = titulo
+        self.__autor = autor
 
     def imprimir(self):
         pass
 
-    
+    @classmethod
+    def obtener_documento_informado(cls, autor: str):
+        return cls("Titulo Dummy", autor)
+
+
+
+documento_word = Documento.obtener_documento_informado('Pedro Perez')
+print(documento_word.autor, documento_word.titulo, sep="--")
+
 
 
     
