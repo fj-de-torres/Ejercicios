@@ -7,12 +7,43 @@ class Libro:
     def titulo(self):
         return self._titulo
 
-    def __init__(self,titulo:str):
+    def __init__(self,titulo:str, numero_paginas: int):
         self.__titulo = titulo
+        self.__Numero_paginas = numero_paginas
     #Responsabilidades:
 
 ```
+#### Otros métodos mágicos:
+##### __repr__:
 ```
+    def __repr__(self):
+        return f"<Libro> - {self.__titulo} - {self.__numero_paginas}"
+```
+```
+quijote = Libro('Don Quijote', 450)
+
+print(quijote)
+
+print(repr(quijote))
+```
+##### __del__:
+```
+    def __del__(self):
+            print("Objeto destruido")
+```
+```
+quijote = Libro('Don Quijote', 450)
+
+print(quijote)
+
+print(repr(quijote))
+```
+Así se destruye un objeto utilizando el método mágico __del__:
+
+```
+quijote = None
+```
+
 class Documento:
 #Atributos de clase:
     numero_documentos = 0
@@ -66,6 +97,7 @@ No puede acceder a ninguna parte de la instancia.
     def metodo_estatico(resenya: str):
         print("Reseña documento:" ,resenya)
 ```
+
 #### Atributos de clase:
 Se accede a él a través de la clases como con los métodos estáticos.
 quijote = Libro("Don Quijote de la Mancha")
