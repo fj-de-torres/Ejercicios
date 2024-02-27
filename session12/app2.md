@@ -55,11 +55,12 @@ class Profesor:
             examanes_corregidos.append(self.corregir_examen(examen))
         
         return examanes_corregidos
-    def corregir_examen(self, examen: Examen) -> Examen:
+    def __corregir_examen(self, examen: Examen) -> Examen:
         import random
         examen.nota = random.random() * 10 
         return examen
 ```
+def __corregir_examen se ha vuelto privado gracias al doble _. Es decir, los métodos también pueden hacerse "no accesibles"
 2. Segunda versión:
 Con list comprehension
 ```
@@ -74,3 +75,38 @@ def corregir_examenes(self, *examenes: tuple) -> list[Examen]:
         return [self.corregir_examen(examen) for examen in examenes]    
 ```
 3. Una tercera forma sería con un ***map***
+
+Ejemplos:
+
+```
+examen_mates = Examen('Matematica')
+examen_literatura = Examen('Literatura')
+examen_ingles = Examen('English')
+
+profe_juan = Profesor('Juan', 'Mates')
+
+
+examenes_corregidos = profe_juan.corregir_examenes(examen_mates, examen_ingles)
+
+for examen in examenes_corregidos:
+    print(examen.tema, examen.nota, sep=":")
+```
+Resultado:
+
+Matematica:3.65
+English:9.01
+
+```
+asignaturas = ["mates", "literatura"]
+PREFIX = "examen_"
+
+profe_juan = Profesor('Juan', 'Mates')
+
+lista = list()
+for asig in asignaturas:
+    lista.append(Examen.crear_examen(asig))
+else:
+    examenes_corregidos = profe_juan.corregir_examenes(*lista)
+    for examen in examenes_corregidos:
+        print(examen.tema , examen.nota, sep=":")
+```
