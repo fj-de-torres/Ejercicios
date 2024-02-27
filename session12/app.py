@@ -4,8 +4,29 @@ class Libro:
     def titulo(self):
         return self.__titulo
     
-    def __init__(self, titulo:str):
+    def __init__(self, titulo:str, numero_paginas: int):
         self.__titulo = titulo
+        self.__numero_paginas = numero_paginas
+
+    def __str__(self):
+        return f"{self.__titulo}"
+    
+    def __repr__(self):
+        return f"<Libro> - {self.__titulo} - {self.__numero_paginas}"
+    
+
+    def __del__(self):
+        print("Objeto destruido")
+
+
+
+quijote = Libro('Don Quijote', 450)
+
+print(quijote)
+
+print(repr(quijote))
+
+quijote = None
 
 
 class Documento:
@@ -67,11 +88,15 @@ print (documento_word.numero_documentos)
 
 """
 
+"""
 documento1 = Documento('Valores bursatiles', 'Joshua')
 print(Documento.numero_documentos)
 documento2 = Documento('Parrila TV', 'Pedro')
 print(Documento.numero_documentos)
-
-
-quijote = Libro("Don Quijote de la Mancha")
-print(quijote.titulo)
+documento3 = Documento.obtener_documento_informado('Juan')
+print(Documento.numero_documentos)
+documento2.numero_documentos = 10
+print(Documento.numero_documentos)
+print(documento2.numero_documentos)
+print(documento1.numero_documentos)
+"""
