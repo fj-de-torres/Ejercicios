@@ -93,8 +93,20 @@ for examen in examenes_corregidos:
 ```
 Resultado:
 
-Matematica:3.65
-English:9.01
+> Matematica:3.65
+> English:9.01
+
+Para crear dinámicamente las asignaturas a corregir:
+```
+@dataclass
+class Examen:
+    tema: str
+    nota: float = 0.0
+
+    @classmethod
+    def crear_examen(cls, tema:str):
+        return cls(tema)
+```
 
 ```
 asignaturas = ["mates", "literatura"]
@@ -110,3 +122,8 @@ else:
     for examen in examenes_corregidos:
         print(examen.tema , examen.nota, sep=":")
 ```
+
+Resultado:
+
+> Matematica_1:7.16
+> Literatura_2:3.65
