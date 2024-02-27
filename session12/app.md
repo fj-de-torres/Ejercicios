@@ -43,7 +43,7 @@ Así se destruye un objeto utilizando el método mágico __del__:
 ```
 quijote = None
 ```
-
+```
 class Documento:
 #Atributos de clase:
     numero_documentos = 0
