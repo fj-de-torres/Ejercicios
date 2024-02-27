@@ -33,8 +33,10 @@ class Documento:
     def __init__(self, titulo:str, autor: str):
         self.__titulo = titulo
         self.__autor = autor
-        Documento.numero_documentos += 1 
-
+        Documento.numero_documentos += 1
+```
+**OJO:** No he puesto _self_.numero_documentos; sino _Documento_ para que sea una variable de clase
+```
     def imprimir(self):
         pass
 
@@ -83,6 +85,8 @@ Puedo acceder también a través de una instancia:
 ```
 print(documento_word.numero_documentos)
 ```
+Resultado:
+
 > 0
 
 Es decir, es un valor que comparten todas las instancias.
