@@ -33,15 +33,19 @@ class Documento:
     @classmethod
     def obtener_documento_informado(cls, autor: str):
         return cls("Titulo Dummy", autor)
+    
+    @staticmethod
+    def metodo_estatico(resenya: str):
+        print("Reseña documento:" ,resenya)
 
 
 
 documento_word = Documento.obtener_documento_informado('Pedro Perez')
 print(documento_word.autor, documento_word.titulo, sep="--")
 
+Documento.metodo_estatico('Documento validado')
 
 
-    
 
 quijote = Libro("Don Quijote de la Mancha")
 print(quijote.titulo)
