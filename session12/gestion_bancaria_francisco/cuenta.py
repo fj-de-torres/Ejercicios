@@ -1,3 +1,5 @@
+#from cliente import Cliente
+
 class Cuenta:
 
     @property
@@ -19,3 +21,7 @@ class Cuenta:
 
     def __str__(self) -> str:
         return f"Número de cuenta: {self.__numero_cuenta}, Saldo: {self.__saldo}. {self.__propietario}. "
+    
+    def mostrar_informacion(self):
+        print(self.__str__())
+        return (self.__numero_cuenta, self.__saldo, self.__propietario)
