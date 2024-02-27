@@ -1,5 +1,14 @@
-class Cliente:
+from cuenta import Cuenta
 
-    def __init__(self,nombre:str,dni:str) -> None:
+class Banco:
+
+    @property
+    def cuentas(self):
+        return self.__cuentas
+
+    def __init__(self, nombre) -> None:
         self.__nombre = nombre
-        self.__dni = dni
+        self.__cuentas = list()
+
+    def agregar_cuenta(self, cuenta: Cuenta):
+        self.__cuentas.append(cuenta)
