@@ -14,13 +14,15 @@ class Libro:
 ```
 ```
 class Documento:
-    
+#Atributos de clase:
+    numero_documentos = 0
     @property
     def titulo(self):
         return self.__titulo
     
     @titulo.setter
     def titulo(self, nuevo_titulo: str):
+    #atributos privados
         self.__titulo = nuevo_titulo
 
     @property
@@ -61,7 +63,8 @@ No puede acceder a ninguna parte de la instancia.
     def metodo_estatico(resenya: str):
         print("Reseña documento:" ,resenya)
 ```
-
+#### Atributos de clase:
+Se accede a él a través de la clases como con los métodos estáticos.
 quijote = Libro("Don Quijote de la Mancha")
 
 print(quijote.titulo)
@@ -71,3 +74,16 @@ documento.word = Documento.obtener_documento_informado('Pedro Pérez')
 ```
 Documento.metodo_estatico('Documento validado')
 ```
+Accedo a través de la clasea, no de una instancia
+```
+print(Documento.numero_documentos)
+```
+Puedo acceder también a través de una instancia:
+```
+print(documento_word.numero_documentos)
+```
+> 0
+
+Es decir, es un valor que comparten todas las instancias.
+Cuando una instancia cambia el atributo de clase, se convierte en atributo de instancia, y no modifica el común de la clase. Cuando se cambia el atributo desde la clase, se cambia en todas las instancias. Si lo cambia una instancia, ya se convierte en privado para esa instancia.
+
