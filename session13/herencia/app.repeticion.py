@@ -5,12 +5,12 @@ class A:
     def __init__(self) -> None:
         self._data1 = 10
 
-class B:
+class B(A):
     pass
 
 class C:
     ...
 
-b = A()
+b = B()
 b._data1
 print(b._data1)

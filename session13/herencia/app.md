@@ -17,7 +17,7 @@ class C(B):
 Se ha de repartir la responsabilidad, desde más general (class A), hasta más específica.
 
 ```
-b = A()
+b = B()
 b.__data1
 ```
 No hay acceso.
