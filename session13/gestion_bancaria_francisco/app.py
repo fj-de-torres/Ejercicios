@@ -30,5 +30,7 @@ if __name__ == "__main__":
     banco_trinidad.agregar_cuenta(cuenta_juan)
     linea()
     print(banco_trinidad)
+    linea()
     print(banco_trinidad.mostrar_informacion())
     linea()
+    print(banco_trinidad)
