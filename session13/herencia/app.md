@@ -2,7 +2,7 @@
 
 ## Simple:
 
-Herencia simple multinivel:
+##### Herencia simple multinivel:
 ```
 class A:
     def __init__(self) -> None:
