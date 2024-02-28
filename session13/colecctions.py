@@ -68,4 +68,3 @@ print(amigos)
 amigos.popleft()
 print("-"*50)
 print(amigos)
-print(amigos.__getattribute__
