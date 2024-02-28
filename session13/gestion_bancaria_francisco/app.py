@@ -2,6 +2,7 @@ from os import system
 from cliente import Cliente
 from banco import Banco
 from cuenta import Cuenta
+from funfont import *
 
 system("cls || clear")
 

@@ -1,4 +1,5 @@
 from colorama import Fore, Back, Style
+from prettytable import PrettyTable
 def funfont(string:str)->str:
     new_string=""
     for char in string:
@@ -10,7 +11,26 @@ def funfont(string:str)->str:
     
     return Fore.LIGHTGREEN_EX + new_string + Style.RESET_ALL
 
+def header(string:str)->str:
+    return Fore.YELLOW + string + Fore.WHITE
+
+def linea(char:str = "⸺",times:int = 50):
+    print(Fore.LIGHTMAGENTA_EX + "⸠" + char*times + "﹁" + Style.RESET_ALL)
+
+def linea_gruesa(char:str = "➕",times:int = 50):
+    print("➕"+"➖"*times+"➕")
+
 if __name__ == "__main__":
     from os import system
     system("cls || clear")
-    print(funfont(input("Escribe una frase a convertir (¡sin tildes!): ")))
+    print(funfont("Usage:"))
+    print("""
++------------------------------+-------------------------------+
+| print(funfont("Hola")) gives | print(header("Header")) gives |
++------------------------------+-------------------------------+
+|           Ｈｏｌａ           |            """,header("Header")+"""            |
++------------------------------+-------------------------------+""")
+print()
+print(funfont("linea(times=100):"))
+linea(times=100)
+linea_gruesa()

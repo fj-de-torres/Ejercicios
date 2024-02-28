@@ -66,3 +66,4 @@ results2.add_column(Fore.YELLOW + "print(b.test_publico())" + Fore.WHITE, [b.tes
 linea(times=100)
 print(Fore.LIGHTGREEN_EX + "Ｏｒ．．． ｗｉｔｈ Ｐｒｅｔｔｙｔａｂｌｅ：" + Fore.WHITE)
 print(results2)
+linea(times=10)
