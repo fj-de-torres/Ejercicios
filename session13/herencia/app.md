@@ -225,3 +225,66 @@ print(z._data_x, z._data_y)
 Resultado:
 
 > 10 20
+
+## Method resolution order:
+
+```
+print(Z.__mro__)
+```
+Resultado:
+```
+(<class ' __main__,'>, <class '__main__.X'>, <class '__main__Y>, <class 'object'>)
+```
+Nos indica el orden en el que se busca en las clases.
+
+## Excepciones: Gestion de errores / situaciones excepcionales:
+
+```
+class Impresora:
+
+    def imprimir(self, contenido: str):
+        print(contenido)
+```
+Si la impresora se queda sin papel, debería lanzar una excepción, que no necesariamente significa un error:
+
+```
+class PapelException(Exception):
+    pass
+
+class Impresora:
+
+    def imprimir(self, contenido: str, papel: bool = True):
+        print(contenido)
+```
+Estoy creando una clase hija de la clase que ya existe en python llamada *Exception*
+
+```
+epson = Impresora() --> instanciación sin un __init__()
+epson.imprimir('Buenos días')
+```
+Haciendo uso de la clase anterior para generar una excepción personalizada:
+
+```
+class PapelException(Exception):pass
+
+class Impresora:
+
+    def imprimir(self, contenido: str, papel: bool = True):
+        if papel:
+            print(contenido)
+        else:
+            raise PapelException("Falta papel!")
+```
+```
+epson = Impresora()
+try:
+    epson.imprimir('Buenos dias', False)
+except PapelException as pex:
+    print(pex)
+```
+Resultado:
+
+> Falta papel
+
+## Polimorfismo:
+
