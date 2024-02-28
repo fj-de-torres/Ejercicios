@@ -203,12 +203,25 @@ print(b.test_publico())
 
 ```
 class X:
-    pass
+    def __init__(self, data_x: int) -> None:
+        self.__data_x = data_x
+
 class Y:
-    pass
+    def __init__(self, data_y: int) -> None:
+        self.__data_y = data_y
 
 class Z(X,Y):
-    pass
+    def __init__(self, data_x: int, data_y: int) -> None:
+        X.__init__(self, data_x)
+        Y.__init__(self, data_y)
 ```
-
+El primer padre en el que se busca, es X, y luego en la Y si no encuentra el método en X; porque el orden de eleccion de los padres ha sido X,Y.
 Recordemos que sólo se heredan las partes **no privadas**.
+
+```
+z = Z(10,20)
+print(z._data_x, z._data_y)
+```
+Resultado:
+
+> 10 20
