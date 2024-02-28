@@ -1,11 +1,16 @@
 from colorama import Fore, Back, Style
-def funfont(*string:str)->str:
+def funfont(string:str)->str:
     new_string=""
     for char in string:
-        if char.isalnum():
-            new_string += chr(ord(char) + 65216)
-        elif char == " ":
+        #new_string += chr(ord(char) + 65248)
+        if char != " ":
+            new_string += chr(ord(char) + 65248)
+        else:
             new_string += " "
-    return new_string
+    
+    return Fore.LIGHTGREEN_EX + new_string + Style.RESET_ALL
 
-print(funfont("Tu"))
+if __name__ == "__main__":
+    from os import system
+    system("cls || clear")
+    print(funfont(input("Escribe una frase a convertir (¡sin tildes!): ")))
