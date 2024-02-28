@@ -93,7 +93,6 @@ Resultado:
 > test_publico_b
 > 10
 > test_publico_c
->
 
 Ahora tomamos de la clase hija + la clase padre:
 ```
