@@ -171,7 +171,33 @@ Resultado:
 > 10
 > test_publico_ctest_publico_btest_publico_a
 
+Desde la clase B puedo también, directamente, instanciar la clase A cuando instancie la B:
 
+```
+class B(A):
+    
+    def __init__(self, valor: int, valor2: int) -> None:
+        super().__init__(valor)
+```      
+Aquí se instancia directamente, sin self. Es de los pocos casos (en *valor*).
+```
+        self.__data2 = valor2
+    
+    def test_publico(self):
+        return "test_publico_b" + super().test_publico()
+
+class C(B):
+    def test_publico(self):
+        return "test_publico_c" + super().test_publico()
+    
+    def metodo_c(self):
+        return super().metodo_a()
+```
+```
+b = B(10)
+print(b._data1)
+print(b.test_publico())
+```
 
 ## Múltiple:
 
