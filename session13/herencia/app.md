@@ -129,7 +129,8 @@ print(c.test_publico())
 Resultado:
 
 > 10
-> test_publico_btest_publico_a
+> test_publico_b
+> test_publico_a
 > 10
 > test_publico_c
 >
