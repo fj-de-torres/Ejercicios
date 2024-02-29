@@ -25,5 +25,5 @@ print(rd.sample(saludos,2))
 rd.shuffle(saludos)
 print(funfont(saludos[0]))
 
-linea_gruesa()
+linea_gruesa(times=57)
 print(funfont("Hola"))
