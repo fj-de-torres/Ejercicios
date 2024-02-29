@@ -1,3 +1,6 @@
+from funfont import *
+from os import system
+
 class Counter():
     count = 0
 
@@ -61,8 +64,10 @@ class Tiempo_Atmosferico():
 
 t_at = Tiempo_Atmosferico([56.55,45.90,68.90,32.10])
 temps_celsius = t_at.in_celsius()
-print(temps_celsius)
-
+#print(temps_celsius)
+linea_gruesa()
+print_columna("print(temps_celsius)",temps_celsius)
 temp_c = Tiempo_Atmosferico.convert_from_faren_to_celsius(56.55)
-print(temp_c)
+#print(temp_c)
+print_columna("print(tem_c)",str(temp_c))
 

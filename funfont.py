@@ -1,9 +1,14 @@
 from colorama import Fore, Back, Style
 from prettytable import PrettyTable
 column = PrettyTable()
-def add_columna(string1,string2)->str:
+
+def linea_gruesa(char:str = "➕",times:int = 50):
+    print("➕"+"➖"*times+"➕")
+
+def print_columna(string1,string2)->str:
     column.add_column(header(string1),[string2])
     print(column)
+    linea_gruesa()
         
 
 def funfont(string:str)->str:
@@ -23,8 +28,6 @@ def header(string:str)->str:
 def linea(char:str = "⸺",times:int = 50):
     print(Fore.LIGHTMAGENTA_EX + "⸠" + char*times + "﹁" + Style.RESET_ALL)
 
-def linea_gruesa(char:str = "➕",times:int = 50):
-    print("➕"+"➖"*times+"➕")
 
 if __name__ == "__main__":
     from os import system
