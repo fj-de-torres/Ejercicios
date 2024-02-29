@@ -1,13 +1,13 @@
 from colorama import Fore, Back, Style
 from prettytable import PrettyTable
-column = PrettyTable()
+columna = PrettyTable()
 
 def linea_gruesa(char:str = "➕",times:int = 50):
     print("➕"+"➖"*times+"➕")
 
 def print_columna(string1,string2)->str:
-    column.add_column(header(string1),[string2])
-    print(column)
+    columna.add_column(header(string1),[string2])
+    print(columna)
     linea_gruesa()
         
 
