@@ -137,5 +137,6 @@ print(isinstance(b, B))
 ```
 Resultado:
 > True
-> False
+> True
+
 
