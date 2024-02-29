@@ -16,6 +16,7 @@ class ListaNumeros:
     def sumar_elemtos(self)->float:
         for numero in self.lista:
             self.suma += numero
+
 class ListaOperaciones(ListaNumeros):
     def __init__(self, lista: list,operacion:Operaciones) -> None:
         super().__init__(lista)
@@ -23,8 +24,9 @@ class ListaOperaciones(ListaNumeros):
     def operacion(self,operacion):
         op_string=""
         for pos in range(1,len(self.lista)):
-            op_string += str(self.listalista[pos])+operacion+str(self.lista[pos-1])
-        return int(op_string)
+            op_string += str(self.listalista[pos]) + operacion + str(self.lista[pos-1])
+        return op_string
         
-
-
+system("cls || clear")
+suma_1_2 = ListaOperaciones([1,2],"sumar")
+suma_1_2.operacion("sumar")
