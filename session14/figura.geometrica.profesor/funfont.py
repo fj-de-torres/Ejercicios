@@ -17,7 +17,7 @@ def funfont(string:str)->str:
         #new_string += chr(ord(char) + 65248)
         if char != " ":
             new_string += chr(ord(char) + 65248)
-        else:
+        elif char == " ":
             new_string += " "
     
     return Fore.LIGHTGREEN_EX + new_string + Style.RESET_ALL
@@ -43,8 +43,8 @@ if __name__ == "__main__":
     print(funfont("linea(times=100):"))
     linea(times=100)
     linea_gruesa()
-    add_columna("Header","cell1")
-    add_columna("segundo header","resultado2")
-    column = PrettyTable()
-    add_columna("segundo header","resultado2")
-    print(column)
+    print_columna("Header","cell1")
+    print_columna("segundo header","resultado2")
+    columna = PrettyTable()
+    print_columna("segundo header","resultado2")
+    print(columna)

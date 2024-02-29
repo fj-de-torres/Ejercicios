@@ -1,5 +1,13 @@
 import random as rd
 import math
+from sys import path
+path.append('/home/francisco/Documents/Learning/PUE/Python/Ejercicios/')
+from funfont import *
+from colorama import Fore,Back, Style
+
+# print(Fore.BLACK + Style.BRIGHT + Back.GREEN + "¡Hola!" + Style.RESET_ALL)
+
+# print(funfont("¡Pasen y vean!"))
 
 print(math.floor((rd.random() * 10)))
 
@@ -15,4 +23,7 @@ print(rd.sample(saludos,2))
 #Desordena la lista. Si luego voy cogiendo el primer elemento de la lista con el nuevo orden, es como iterrar por ella:
 
 rd.shuffle(saludos)
-print(saludos[0])
+print(funfont(saludos[0]))
+
+linea_gruesa()
+print(funfont("Hola"))
