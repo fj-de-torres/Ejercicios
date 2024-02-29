@@ -57,8 +57,9 @@ class A:
 c.test_a()
 c = C()
 print(c._data1)
-#c.test_a() incorrecto porque test_a es privado
 ```
+c.test_a() incorrecto porque test_a es privado. Cuando lo hago protegido, las subclases pueden acceder sin necesidad de *getters* ni *setters*
+
 Resultado:
 
 > No haccesible
