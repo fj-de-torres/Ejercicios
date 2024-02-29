@@ -44,3 +44,4 @@ if __name__ == "__main__":
     add_columna("segundo header","resultado2")
     column = PrettyTable()
     add_columna("segundo header","resultado2")
+    print(column)
