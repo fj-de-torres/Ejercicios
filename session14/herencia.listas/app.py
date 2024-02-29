@@ -3,11 +3,18 @@ import dataclasses
 
 @dataclasses.dataclass
 class Operaciones:
-    sumar = "+"
-    restar = "-"
-    multiplicar = "*"
-    dividir = "/"
+    sumar:str
+    restar: str
+    multiplicar: str
+    dividir: str
     
+operador = {
+    'sumar': "+",
+    'restar':"-",
+    'multiplicar':"*",
+    'dividir':"/"
+}
+
 class ListaNumeros:
     def __init__(self,lista:list) -> None:
         self.lista = lista
