@@ -48,3 +48,4 @@ if __name__ == "__main__":
     columna = PrettyTable()
     print_columna("segundo header","resultado2")
     print(columna)
+    
