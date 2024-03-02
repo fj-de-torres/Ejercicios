@@ -1,4 +1,5 @@
-﻿class Stack:
+"""A version of the stack class that counts how many objects get in and get out"""
+class Stack:
     def __init__(self):
         self.__stk = []
 
