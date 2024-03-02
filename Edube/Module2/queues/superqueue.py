@@ -53,3 +53,28 @@ for i in range(4):
 
 # print(type(queue))
 # print(queue)
+class ExampleClass:
+    class_var = "I am a class variable"
+
+    def __init__(self):
+        self.instance_var = "I am an instance variable"
+
+# Create two instances of ExampleClass
+obj1 = ExampleClass()
+obj2 = ExampleClass()
+
+# Print class_var and instance_var for both objects
+print(obj1.class_var)  # prints: I am a class variable
+print(obj1.instance_var)  # prints: I am an instance variable
+print(obj2.class_var)  # prints: I am a class variable
+print(obj2.instance_var)  # prints: I am an instance variable
+
+# Change class_var and instance_var for obj1
+obj1.class_var = "Changed class variable"
+obj1.instance_var = "Changed instance variable"
+
+# Print class_var and instance_var for both objects again
+print(obj1.class_var)  # prints: Changed class variable
+print(obj1.instance_var)  # prints: Changed instance variable
+print(obj2.class_var)  # prints: I am a class variable
+print(obj2.instance_var)  # prints: I am an instance variable
