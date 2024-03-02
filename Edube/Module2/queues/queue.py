@@ -13,7 +13,7 @@ class Queue:
     def put(self, elem):
         #
         # Escribe código aquí.
-        self.__queue.insert(-1,elem)
+        self.__queue.insert(0,elem)
 
     def get(self):
         #
