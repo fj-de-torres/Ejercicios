@@ -33,3 +33,4 @@ try:
 except QueueError as er:
     #print("Error de Cola")
     print(er)
+#https://sl.bing.net/iAV8Wj9xEgC
