@@ -20,18 +20,17 @@ Dom
 Lo siento, no puedo atender tu solicitud.
 """
 from os import system
-
+from collections import namedtuple
 class WeekDayError(Exception):
     pass
 	
 
 class Weeker:
-    #
-    # Escribir código aquí.
-    #
+    Semana = ("Semana",['Lun','Mar','Mie','Jue','Vie','Sab','Dom'])
+    semana = Semana()
 
     def __init__(self, day):
-        #
+        
         # Escribir código aquí.
         #
 
