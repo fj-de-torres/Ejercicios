@@ -20,52 +20,95 @@ Dom
 Lo siento, no puedo atender tu solicitud.
 """
 from os import system
-from collections import namedtuple
-
-class WeekDayError(Exception):
-
-@property
-def num_dia(self):
-    num_dia = self.__num_dia
+from colorama import Fore, Back, Style
+class WeekDayError(Exception): 
+    pass
 
 class Weeker:
+
+    exception_counter = 0
+
+    @property
+    def num_dia(self):
+        return self.__num_dia
+    
+    @property
+    def dias_semana(self):
+        return self.__dias_semana
+    @property
+    def dia_semana(self):
+        return self.__dia_semana
+
     __dias_semana =('Lun','Mar','Mie','Jue','Vie','Sab','Dom')
+    
 
     def __init__(self, day):
         self.__dia_semana = day
         try:
-            num_dia = self.dias_semana.index(self.__dia_semana)
+            self.__num_dia = self.dias_semana.index(self.dia_semana)
         except:
+            Weeker.exception_counter += 1
             raise WeekDayError
         # Escribir código aquí.
         #
 
     def __str__(self):
-        return f"{self.__dia_semana}"
+        return f"{self.dia_semana}"
         # Escribir código aquí.
         #
 
     def add_days(self, n):
-        self.num_dia = self.__dias_semana.index(self.__dia_semana)
-        __num_dias = ((self.__num_dia + n) % 7)
-        self.__dia_semana = self.__dias_semana[__num_dias]
+        num_dia = self.dias_semana.index(self.dia_semana)
+        num_dias = ((num_dia + n) % 7)
+        self.__dia_semana = self.dias_semana[num_dias]
 
 
     def subtract_days(self, n):
-        ___num_dia = self.__dias_semana.index(self.__dia_semana)
-        __num_dia = ((__num_dia - n)% 7)
-        self.__dia_semana = self.__dias_semana[__num_dia]
-        # Escribir código aquí.
-        #
+        num_dia = self.dias_semana.index(self.__dia_semana)
+        num_dia = ((num_dia - n)% 7)
+        self.__dia_semana = self.dias_semana[num_dia]
+
+spanish = "Lo siento, no puedo atender tu solicitud."
+german = "Es tut mir leid, ich kann Ihre Anfrage nicht erfüllen!"
+
+def create_weeday(week_day:str,day:str):
+
+    try:
+        week_day = Weeker(day)
+    except WeekDayError:
+        if Weeker.exception_counter <= 1:
+            print(spanish)
+            print(Weeker.exception_counter)
+        else:
+            print(Fore.LIGHTRED_EX + Style.BRIGHT + german.upper() + Style.RESET_ALL)
+            print(Weeker.exception_counter)
+    return week_day
 
 system("cls || clear")
-try:
-    weekday = Weeker('Lun')
-    print(weekday)
-    weekday.add_days(15)
-    print(weekday)
-    weekday.subtract_days(23)
-    print(weekday)
-    weekday = Weeker('Lunes')
-except WeekDayError:
-    print("Lo siento, no puedo atender tu solicitud.")
+
+weekday = Weeker('Lun')
+# weekday = create_weeday("weekday",'Lun')
+print(weekday)
+weekday.add_days(15)
+print(weekday)
+weekday.subtract_days(23)
+print(weekday)
+# weekday = create_weeday('weekday','Lunes')
+# weekday = create_weeday('weekday','Martes')
+
+# create_weeday("weekday",'Lunes')
+# create_weeday("weekday",'Martes')
+# print("Number of Weeker exceptions: ", Weeker.exception_counter)
+# print("Number of weeday exceptions: ", weekday.exception_counter)
+for i in ('Lun','Lunes','Martes'):
+    try:
+        weekday = Weeker(i)
+        weekday.add_days(15)
+        weekday.subtract_days(23)
+    except WeekDayError:
+        if Weeker.exception_counter <= 1:
+            print(spanish)
+            print()
+        else:
+            print(Fore.LIGHTRED_EX + Style.BRIGHT + german.upper() + Style.RESET_ALL)
+            print(f"(y ya van {Weeker.exception_counter} veces)")
