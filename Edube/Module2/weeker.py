@@ -23,18 +23,27 @@ from os import system
 from collections import namedtuple
 
 class WeekDayError(Exception):
-
-@property
-def num_dia(self):
-    num_dia = self.__num_dia
+    pass
 
 class Weeker:
+
+    @property
+    def num_dia(self):
+        return self.__num_dia
+    
+    @property
+    def dias_semana(self):
+        return self.__dias_semana
+    @property
+    def dia_semana(self):
+        return self.__dia_semana
+
     __dias_semana =('Lun','Mar','Mie','Jue','Vie','Sab','Dom')
 
     def __init__(self, day):
         self.__dia_semana = day
         try:
-            num_dia = self.dias_semana.index(self.__dia_semana)
+            self.__num_dia = self.dias_semana.index(self.__dia_semana)
         except:
             raise WeekDayError
         # Escribir código aquí.
@@ -46,15 +55,15 @@ class Weeker:
         #
 
     def add_days(self, n):
-        self.num_dia = self.__dias_semana.index(self.__dia_semana)
+        num_dia = self.dias_semana.index(self.__dia_semana)
         __num_dias = ((self.__num_dia + n) % 7)
-        self.__dia_semana = self.__dias_semana[__num_dias]
+        self.__dia_semana = self.dias_semana[__num_dias]
 
 
     def subtract_days(self, n):
-        ___num_dia = self.__dias_semana.index(self.__dia_semana)
-        __num_dia = ((__num_dia - n)% 7)
-        self.__dia_semana = self.__dias_semana[__num_dia]
+        num_dia = self.dias_semana.index(self.__dia_semana)
+        num_dia = ((num_dia - n)% 7)
+        self.__dia_semana = self.dias_semana[num_dia]
         # Escribir código aquí.
         #
 
