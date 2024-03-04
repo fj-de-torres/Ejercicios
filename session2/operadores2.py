@@ -1,3 +1,6 @@
+# Strings:
+## slicing, reverse slicing, index, find, strip, upper, lower, strip, replace, startswith, endswith:
+
 import os
 os.system('cls||clear')
 
@@ -26,9 +29,9 @@ data11 = not((1 != 2 and 1 < 0) or 45 > 90)
 
 print (f"data11 = {data11}\n")
 
-# Tipos de datos:
+## Tipos de datos:
 # bool, str, int, float...
-#Hay diferentes operativas para los distintos tipos de datos.
+#### Hay diferentes operativas para los distintos tipos de datos.
 
 a = bool("")
 print(a) # False
@@ -39,13 +42,13 @@ if not a:
 a = bool(2)
 print(a) #Todo es evaluado a True salvo las cadenas vacías, 0, None...
 
-#STRINGS:
+## STRINGS:
 nombre = "Francisco"
 b = nombre[len(nombre) - 1]
 print(b)
 b = nombre[-2]
 print(b)
-#Substring: tomo parte de la cadena:
+### Substring: tomo parte de la cadena:
 alias = nombre[0:4] #slicing de una cadena
 print(f"Alias de Francisco: {alias}")
 nombre_completo = "Ricardo Jaume"
@@ -86,7 +89,7 @@ c = texto.find("Hola")
 d = texto.find("Hola",4)
 e = texto.find("Hola",4,20) #No aparece esa subcadena en el tramo deseado
 print(c,d,e)
-#Con index, si la cadena buscada no existe, nos da error que termina el programa
+#### Con index, si la cadena buscada no existe, nos da error que termina el programa
 print(nombre_completo.startswith("R"))
 print(nombre_completo.startswith("F"))
 print(nombre_completo.endswith("e"))

@@ -21,31 +21,40 @@ Lo siento, no puedo atender tu solicitud.
 """
 from os import system
 from collections import namedtuple
+
 class WeekDayError(Exception):
-    pass
-	
+
+@property
+def num_dia(self):
+    num_dia = self.__num_dia
 
 class Weeker:
-    Semana = ("Semana",['Lun','Mar','Mie','Jue','Vie','Sab','Dom'])
-    semana = Semana()
+    __dias_semana =('Lun','Mar','Mie','Jue','Vie','Sab','Dom')
 
     def __init__(self, day):
-        
+        self.__dia_semana = day
+        try:
+            num_dia = self.dias_semana.index(self.__dia_semana)
+        except:
+            raise WeekDayError
         # Escribir código aquí.
         #
 
     def __str__(self):
-        #
+        return f"{self.__dia_semana}"
         # Escribir código aquí.
         #
 
     def add_days(self, n):
-        #
-        # Escribir código aquí.
-        #
+        self.num_dia = self.__dias_semana.index(self.__dia_semana)
+        __num_dias = ((self.__num_dia + n) % 7)
+        self.__dia_semana = self.__dias_semana[__num_dias]
+
 
     def subtract_days(self, n):
-        #
+        ___num_dia = self.__dias_semana.index(self.__dia_semana)
+        __num_dia = ((__num_dia - n)% 7)
+        self.__dia_semana = self.__dias_semana[__num_dia]
         # Escribir código aquí.
         #
 
@@ -57,6 +66,6 @@ try:
     print(weekday)
     weekday.subtract_days(23)
     print(weekday)
-    weekday = Weeker('Lun')
+    weekday = Weeker('Lunes')
 except WeekDayError:
     print("Lo siento, no puedo atender tu solicitud.")

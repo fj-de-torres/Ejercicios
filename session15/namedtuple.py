@@ -27,7 +27,7 @@ print(lista_notas)
 
 Estudiante = namedtuple('Estudiante',['nombre','edad','nota'])
 estudiantes = [
-    ('Pedro',1800),
+    ('Pedro',1800,nota),
             ('Maria',18,nota),
             ('Julia',19,nota),
             ('Ramon',24,nota)
