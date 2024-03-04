@@ -20,14 +20,23 @@ Dom
 Lo siento, no puedo atender tu solicitud.
 """
 from os import system
+<<<<<<< HEAD
 from colorama import Fore, Back, Style
 class WeekDayError(Exception): 
+=======
+from collections import namedtuple
+
+class WeekDayError(Exception):
+>>>>>>> 0855eb5aae33c8df7605060e860a310027b21e08
     pass
 
 class Weeker:
 
+<<<<<<< HEAD
     exception_counter = 0
 
+=======
+>>>>>>> 0855eb5aae33c8df7605060e860a310027b21e08
     @property
     def num_dia(self):
         return self.__num_dia
@@ -45,7 +54,11 @@ class Weeker:
     def __init__(self, day):
         self.__dia_semana = day
         try:
+<<<<<<< HEAD
             self.__num_dia = self.dias_semana.index(self.dia_semana)
+=======
+            self.__num_dia = self.dias_semana.index(self.__dia_semana)
+>>>>>>> 0855eb5aae33c8df7605060e860a310027b21e08
         except:
             Weeker.exception_counter += 1
             raise WeekDayError
@@ -58,15 +71,22 @@ class Weeker:
         #
 
     def add_days(self, n):
+<<<<<<< HEAD
         num_dia = self.dias_semana.index(self.dia_semana)
         num_dias = ((num_dia + n) % 7)
         self.__dia_semana = self.dias_semana[num_dias]
+=======
+        num_dia = self.dias_semana.index(self.__dia_semana)
+        __num_dias = ((self.__num_dia + n) % 7)
+        self.__dia_semana = self.dias_semana[__num_dias]
+>>>>>>> 0855eb5aae33c8df7605060e860a310027b21e08
 
 
     def subtract_days(self, n):
         num_dia = self.dias_semana.index(self.__dia_semana)
         num_dia = ((num_dia - n)% 7)
         self.__dia_semana = self.dias_semana[num_dia]
+<<<<<<< HEAD
 
 spanish = "Lo siento, no puedo atender tu solicitud."
 german = "Es tut mir leid, ich kann Ihre Anfrage nicht erfüllen!"
@@ -83,6 +103,10 @@ def create_weeday(week_day:str,day:str):
             print(Fore.LIGHTRED_EX + Style.BRIGHT + german.upper() + Style.RESET_ALL)
             print(Weeker.exception_counter)
     return week_day
+=======
+        # Escribir código aquí.
+        #
+>>>>>>> 0855eb5aae33c8df7605060e860a310027b21e08
 
 system("cls || clear")
 
