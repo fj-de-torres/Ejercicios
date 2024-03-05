@@ -20,36 +20,46 @@ Salida esperada
 """
 
 import math
+from sys import path
+from os import system
 
-
+path.append("/home/francisco/Documents/Learning/PUE/Python/Ejercicios/")
+from funfont import *
 class Point:
     def __init__(self, x=0.0, y=0.0):
-        #
-        # Escribir el código aquí.
-        #
+        self.__x = x
+        self.__y = y
 
+    def __mensajito(self):
+        print(funfont("Yo, hipotenuso")+","+ Style.BRIGHT + " por tus coordenadas, así te uso:"+ Style.NORMAL,sep="\n",end=" ")
+    def __str__(self):
+        return f"{self.__x,self.__y}"
+    
     def getx(self):
-        #f
-        # Escribir el código aquí.
-        #
+        return self.__x
 
     def gety(self):
-        #
-        # Escribir el código aquí.
-        #
+        return self.__y
 
     def distance_from_xy(self, x, y):
-        #
-        # Escribir el código aquí.
-        #
+        distance = math.hypot(x-self.__x,y-self.__y)
+        self.__mensajito()
+        print("\n")
+        return distance
 
     def distance_from_point(self, point):
-        #
-        # Escribir el código aquí.
-        #
+        #point = tuple(point)
+        distance = math.hypot(point.getx()-self.__x,point.gety()-self.__y)
+        self.__mensajito()
+        print("\n")
+        return distance
 
-
+system("cls || clear")
 point1 = Point(0, 0)
 point2 = Point(1, 1)
-print(point1.distance_from_point(point2))
-print(point2.distance_from_xy(2, 0))
+#print(point2)
+print_columna("point1.distance_from_point(point2)",point1.distance_from_point(point2))
+system("cls || clear")
+#linea(times=100)
+print_columna("point2.distance_from_xy(2, 0)",point2.distance_from_xy(2, 0))
+print()

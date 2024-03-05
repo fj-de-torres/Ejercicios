@@ -6,6 +6,7 @@ def linea_gruesa(char:str = "➕",times:int = 50):
     print("➕"+"➖"*times+"➕")
 
 def print_columna(string1,string2)->str:
+    linea_gruesa()
     columna.add_column(header(string1),[string2])
     print(columna)
     linea_gruesa()
@@ -26,7 +27,8 @@ def header(string:str)->str:
     return Fore.YELLOW + string + Fore.WHITE
 
 def linea(char:str = "⸺",times:int = 50):
-    print(Fore.LIGHTMAGENTA_EX + "⸠" + char*times + "﹁" + Style.RESET_ALL)
+    print(Fore.LIGHTMAGENTA_EX + char*times + "﹁" + Style.RESET_ALL)
+    #print(Fore.LIGHTMAGENTA_EX + "⸠" + char*times + "﹁" + Style.RESET_ALL)
 
 
 if __name__ == "__main__":
