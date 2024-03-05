@@ -33,6 +33,7 @@ if __name__ == "__main__":
     from os import system
     system("cls || clear")
     print(funfont("Usage:"))
+    #print(funfont("Take your power back!"))
     print("""
 +------------------------------+-------------------------------+
 | print(funfont("Hola")) gives | print(header("Header")) gives |

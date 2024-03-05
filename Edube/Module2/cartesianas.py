@@ -29,7 +29,7 @@ class Point:
         #
 
     def getx(self):
-        #
+        #f
         # Escribir el código aquí.
         #
 
