@@ -15,7 +15,8 @@ Salida esperada
 """
 from sys import path
 from os import system
-path.append(system("pwd"))
+my_path = "/home/francisco/Documents/Learning/PUE/Python/Ejercicios/"
+path.append(my_path)
 from funfont import *
 from cartesianas import Point
 import math
@@ -23,16 +24,28 @@ import math
 
 
 class Triangle:
-    def __init__(self, vertice1, vertice2, vertice3):
-        #
-        # Escribir el código aquí.
-        #
+
+    @property
+    def vertice1(self):
+        return self.__vertice1
+    @property 
+    def vertice2(self):
+        return self.__vertice2
+    @property
+    def vertice3(self):
+        return self.__vertice3
+    
+    def __init__(self, point1:Point, point2:Point, point3:Point):
+        self.__vertice1 = point1
+        self.__vertice2 = point2
+        self.__vertice3 = point3
 
     def perimeter(self):
-        #
-        # Escribir el código aquí.
-        #
 
+        return self.vertice1.distance_from_point(self.vertice2) + self.vertice1.distance_from_point(self.vertice2) + self.vertice2.distance_from_point(self.vertice3)
+        
+
+system("cls || clear")
 
 triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
 print(triangle.perimeter())
