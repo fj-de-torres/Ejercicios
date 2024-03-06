@@ -51,4 +51,16 @@ if __name__ == "__main__":
     columna = PrettyTable()
     print_columna("segundo header","resultado2")
     print(columna)
+    print(" _"+"⸏"*17)
+    print("⎡"+" "*18+"⎤"+"⎡")
+    for i in range(3):
+        #print("⎥")
+        print("⎜"+" "*18+"⎟")
+    #print("⊢")
+    print("⎣"+"_"*18+"⎦")
+    print()
     
+    print("⎪"+" "*10+"⎪")
+    #print("⎡")
+    print("⎬"+"⎯"*10+"⎨")
+    print("⎪"+" "*10+"⎪")
