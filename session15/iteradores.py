@@ -89,4 +89,4 @@ for _ in range(6):
         print(f"counter: {counter}")
         counter += 1
     except StopIteration:
-        print(f"Last counter that broke it down was: {counter}")
+        print(f"Counter value that broke it down was: {counter}")
