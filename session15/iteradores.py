@@ -6,10 +6,13 @@ for n in [1,2,3]:
 for c in "Hola":
     print(c)
 #Itera por cada línea de un texto:
-for linea in open('data.txt'):
-    print(linea)
+try:
+    for linea in open('data.txt'):
+        print(linea)
+except:
+    pass
 
-class Semana:
+""" class Semana:
     def __init__(self) -> None:
         self.dias = {
             1: "Lunes",
@@ -25,9 +28,11 @@ class Semana:
 
 #Esto en principio no se puede hacer porque un diccionario no es iterable.
 semana = Semana()
-for dia in semana:
-    print(dia)
-
+try:
+    for dia in semana:
+        print(dia)
+except TypeError:
+    pass """
 #Añadimos esto a la clase:
         
 class Semana:
@@ -52,17 +57,36 @@ class Semana:
         else:
             data = self.dias[self.index] 
             self.index += 1
+            return data
 
 #Ahora sí funciona:
-""" semana = Semana()
+semana = Semana()
+counter = 0
 for dia in semana:
-    print(dia) """
+    try:
+        print(f"semna.index is: {semana.index}")
+        print(dia)
+        #print(f"semna.index is: {semana.index}")
+    except StopIteration:
+        print("Ya no hay más días de la semana")
+    finally:
+        print(f"counter: {counter}")
+        counter += 1
 
 #También funciona:
 
+""" print(next(semana))
 print(next(semana))
 print(next(semana))
 print(next(semana))
 print(next(semana))
-print(next(semana))
-print(next(semana))
+print(next(semana)) """
+semana = Semana()
+counter = 0
+for _ in range(6):
+    try:
+        print(next(semana))
+        print(f"counter: {counter}")
+        counter += 1
+    except StopIteration:
+        print(f"Last counter that broke it down was: {counter}")
