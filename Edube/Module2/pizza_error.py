@@ -21,4 +21,4 @@ for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
     except TooMuchCheeseError as tmce: 
         print(tmce, ':', tmce.cheese) 
     except PizzaError as pe: 
-        print(pe, ':', pe.pizza) 
+        print(pe, ':', pe.pizza)
