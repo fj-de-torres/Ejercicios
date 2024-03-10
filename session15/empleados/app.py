@@ -69,5 +69,19 @@ if __name__ == "__main__":
         if not os.path.exists(subdir_path):
     # If it does not exist, create it
             os.makedirs(subdir_path)
-    except :
+    except Exception as error:
+        print(f"An error occured while attempting to create the new file {subdir_path}:",error)
+    file_path = os.path.join(subdir_path, 'users.csv')
+    try:
+        with open(file_path, 'at') as users_file:
+            pass
+    except Exception as error:
+        print(f"Cannot open file {users_file} in append mode:",error)
+    users_list = list()
+    try:
+        for keys in data[0].keys():
+            pass
+    except Exception:
+        pass
         
+
