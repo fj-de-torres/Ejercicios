@@ -1,0 +1,7 @@
+Lavar la ropa,Media
+Comprar leche,Alta
+Enviar email al profesor,Baja
+Pagar el alquiler,Alta
+Estudiar para el examen,Alta
+Cortar el césped,Baja
+Programar la reunión,Media

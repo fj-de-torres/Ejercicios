@@ -2,13 +2,14 @@
 ## getattr y setattr
 
 ```
-class Pitzza:
+class Pizza:
     def __init__(self,info:dict):
         for clave, valor in info.items():
             setattr(self, clave, valor)
 ```
-info es la información oque me permitirá crear el objeto dinámicamente. En principio será un diccionario.
+info es la información que me permitirá crear el objeto dinámicamente. En principio será un diccionario.
 Creo una instancia de pizza con unos valores concretos que yo le pase.
+
 ```
 data =  {
     "nombre": "Cuatro estaciones",
@@ -138,5 +139,4 @@ print(isinstance(b, B))
 Resultado:
 > True
 > True
-
 

@@ -1,3 +1,6 @@
+## Main app
+
+```
 import os
 
 from gestion_ficheros.ficheros import leer_data, escribir_data
@@ -17,9 +20,11 @@ def main():
     tareas = anyadir_tarea(tuple(nueva_tarea.split(",")),tareas) if nueva_tarea else tareas 
     print("*"*50)
     print(tareas)
-    #Si no ha sido una entrada correcta, lo que añado a tareas es otra vez tareas. O sea, que me quedo como estaba.
-    #nueva_tarea and anyadir_tarea(nueva_tarea) or 
-    #Lo bueno de añadir and es que si la entrada del usuario ha sido invádida, anyadir_tarea no se va a ejecutar y por lo tanto no vamos a añadir información. No hay riesgo de añadir información inválida o rara o de formato incorrecto
-
+```
+Si no ha sido una entrada correcta, lo que añado a tareas es otra vez tareas. O sea, que me quedo como estaba.
+nueva_tarea and anyadir_tarea(nueva_tarea) or 
+Lo bueno de añadir and es que si la entrada del usuario ha sido invádida, anyadir_tarea no se va a ejecutar y por lo tanto no vamos a añadir información. No hay riesgo de añadir información inválida o rara o de formato incorrecto
+```
 if __name__ == "__main__":
     main() #Llama al programa principal en vez de andar soltando código aquí
+```
