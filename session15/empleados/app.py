@@ -1,4 +1,4 @@
-from os import system
+import os
 import requests
 class Empleado:
 
@@ -54,7 +54,7 @@ class Programador(Empleado):
         return super().__repr__() + f" - {self.lenguaje}"
 
 if __name__ == "__main__":
-    system("cls || clear")
+    os.system("cls || clear")
     fulano = Programador(1,"Fulano",50_000,"Java")
     print(fulano)
     print(repr(fulano))
@@ -63,3 +63,11 @@ if __name__ == "__main__":
     data = response.json()
     head = ['id' , 'name','username' , 'email' , 'website']
     print(data[0])
+    ruta_directorio = os.path.dirname(__file__)
+    subdir_path = os.path.join(ruta_directorio, 'data')
+    try:
+        if not os.path.exists(subdir_path):
+    # If it does not exist, create it
+            os.makedirs(subdir_path)
+    except :
+        
