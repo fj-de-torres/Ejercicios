@@ -1,4 +1,4 @@
-from session16.abstractas.figuraGeometrica import FiguraGeometrica
+from session16.abstractas.figura_geometrica import FiguraGeometrica
 
 
 class Triangulo(FiguraGeometrica):
@@ -6,22 +6,23 @@ class Triangulo(FiguraGeometrica):
     # @property
     # def lado1(self):
     #     return self.__lado1
-    
-    # @property
-    # def lado2(self):
-    #     return self.__lado2
-    
-    # @property
-    # def lado3(self):
-    #     return self.__lado3
     @property
     def base(self):
         return self.__base
+    
+    @property
+    def lado2(self):
+        return self.__lado2
+    
+    @property
+    def lado3(self):
+        return self.__lado3
+    
     @property
     def altura(self):
         return self.__altura
     
-    def __init__(self, nombre_figura: str,base:float, altura:float) -> None:
+    def __init__(self, nombre_figura: str, altura:float, base:float,lado2:float,lado3:float) -> None:
         super().__init__(nombre_figura)
         # self.__lado1 = lado1
         # self.__lado2 = lado2
@@ -34,6 +35,6 @@ class Triangulo(FiguraGeometrica):
         return area
 
     def calcular_perimetro(self):
-        perimetro = self.lado1 + self.lado2 + self.lado3
+        perimetro = self.base + self.lado2 + self.lado3
         return perimetro
     

@@ -9,7 +9,7 @@ class Triangulo(Figura_Geometrica):
 
         
     def calcular_area(self):
-         """calcyula y devuleve el area de esta figura """
+         """calcula y devuelve el area de esta figura """
          super().calcular_area()
          area = self.lado2 * self.altura * 0.5
          return area

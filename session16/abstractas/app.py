@@ -1,4 +1,6 @@
-from session14.figuras_geometricas import FiguraGeometrica
+from session16.abstractas.cuadrado import Cuadrado
+from session16.abstractas.triangulo import Triangulo
 
+if __name__ == "__main__":
+    
 
-FiguraGeometrica

@@ -1,7 +1,10 @@
-from session16.abstractas.figuraGeometrica import FiguraGeometrica
+from session16.abstractas.figura_geometrica import FiguraGeometrica
 
 
 class Cuadrado(FiguraGeometrica):
+
+    """Creates an object like: object = FiguraGeometrica("nombre_figura","lado")
+    where \"nombre figura\" is the proper name of a geometric figura and \"lado\" is one of its sides """
 
     @property
     def lado(self):
@@ -19,3 +22,4 @@ class Cuadrado(FiguraGeometrica):
         perimetro = 2 * self.lado
         return perimetro
     
+    Cuadrado.help()
