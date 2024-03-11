@@ -1,5 +1,8 @@
-from session16.abstractas.figura_geometrica import FiguraGeometrica
-
+from figura_geometrica import FiguraGeometrica
+from os import system
+from sys import path
+path.append("/home/francisco/Documents/Learning/PUE/Python/Ejercicios/")
+from funfont import *
 
 class Cuadrado(FiguraGeometrica):
 
@@ -11,7 +14,7 @@ class Cuadrado(FiguraGeometrica):
         return self.__lado
     
     def __init__(self, nombre_figura:str,lado:float) -> None:
-        super().__init__(self.nombre_figura)
+        super().__init__(nombre_figura)
         self.__lado = lado
     
     def calcular_area(self) -> float:
@@ -19,7 +22,11 @@ class Cuadrado(FiguraGeometrica):
         return area
     
     def calcular_perimetro(self) -> float:
-        perimetro = 2 * self.lado
+        perimetro = 4 * self.lado
         return perimetro
-    
-    Cuadrado.help()
+
+system("cls || clear")
+cuadrado1 = Cuadrado("cuadrado",2.5)
+print_columna("Área del cuadrado1",cuadrado1.calcular_area())
+print_columna("Perímetro de cuadrado1",cuadrado1.calcular_perimetro())
+#help(object)
