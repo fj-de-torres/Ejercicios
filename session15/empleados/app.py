@@ -15,10 +15,12 @@ class Empleado:
     @property
     def set_id(self,id):
         self.__id = id
+        
     @property
     def set_nombre(self,nombre):
         self.__nombre = nombre
-    @property
+
+    @salario.setter
     def set_salario(self,salario):
         self.__salario = salario
 
@@ -39,7 +41,7 @@ class Programador(Empleado):
     @property
     def lenguaje(self):
         return self.__lenguaje
-    @property
+    @lenguaje.setter
     def set_lenguaje(self,lenguaje):
         self.__lenguaje = lenguaje
 
