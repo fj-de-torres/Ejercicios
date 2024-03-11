@@ -56,13 +56,13 @@ class Programador(Empleado):
 if __name__ == "__main__":
     os.system("cls || clear")
     fulano = Programador(1,"Fulano",50_000,"Java")
-    print(fulano)
-    print(repr(fulano))
+    #print(fulano)
+    #print(repr(fulano))
     url = "https://jsonplaceholder.typicode.com/users"
     response = requests.get(url)
     data = response.json()
     head = ['id' , 'name','username' , 'email' , 'website']
-    print(data[0])
+    #print(data[0])
     ruta_directorio = os.path.dirname(__file__)
     subdir_path = os.path.join(ruta_directorio, 'data')
     try:
@@ -79,9 +79,10 @@ if __name__ == "__main__":
         print(f"Cannot open file {users_file} in append mode:",error)
     users_list = list()
     try:
-        for keys in data[0].keys():
-            pass
-    except Exception:
-        pass
+        for indice, keys in enumerate(data[0].values()):
+            if indice <= 3:
+                print(keys,end=",")
+    except Exception as ex:
+        print("Any error:",ex)
         
 
