@@ -8,5 +8,7 @@ from os import system
 if __name__ == "__main__":
 
     system("cls || clear")
-    triangulo = ("Triángulo",3,4,)
+    triangulo1 = Triangulo("Triángulo1",7,7,7,7 * .5)
+    print_columna("Área triángulo 1",triangulo1.calcular_area())
+    print_columna("Perímetro triángulo1",triangulo1.calcular_perimetro())
 
