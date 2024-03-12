@@ -1,9 +1,11 @@
+from os import system
 from sys import path
+from datetime import date, datetime
+from colorama import Fore,Back, Style
+#Local path to import funfont own module:
 path.append('/home/francisco/Documents/Learning/PUE/Python/Ejercicios/')
 from funfont import *
-from colorama import Fore,Back, Style
-from os import system
-from datetime import date, datetime
+
 
 cumple_juan = date(1985, 4, 18)
 print_columna("cumple_juan = date(1985, 4, 18)",cumple_juan)
@@ -45,10 +47,10 @@ print(hoy.strftime("%d-%m-%y"))
 #Si lo pongo el año en mayúsculas, el año sale en 4 dígitos. En minúsculas, en dos dígitos.
 
 inicio = time()
-columna.del_column
-columna.del_column
-columna.del_column
-columna.del_column
+columna = PrettyTable()
+# columna.del_column()
+# columna.del_column()
+# columna.del_column()
 print_columna("inicio.hour",inicio.hour)
 #Hay que iniciarlo:
 print(time(18,25))

@@ -10,6 +10,7 @@ def print_columna(string1,string2)->str:
     columna.add_column(header(string1),[string2])
     print(columna)
     linea_gruesa()
+    return columna
         
 
 def funfont(string:str)->str:
