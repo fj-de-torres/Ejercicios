@@ -4,7 +4,9 @@ from sys import path
 path.append("/home/francisco/Documents/Learning/PUE/Python/Ejercicios/")
 from funfont import *
 import shutil
-system("cls || clear")
+def clear():
+    system("cls || clear")
+clear()
 p = Path('data1.txt')
 print(type(p))
 path = p.parent.absolute()
@@ -44,8 +46,13 @@ print(data1.parent.absolute())
 #La figura the Python que permiten usar *with*, se llama 'context manager':
 #x no permite machacar el contenido. Si no existe, lo crea, pero si ya está creado, no sobreescribirá y dará error:
 
-with open('write.txt','x') as file:
+with open('write.txt','w') as file:
     file.write('Hola mundo')
 
-with open('write.txt','x') as file:
-    file.write('Hola a todo el mundo')
+# with open('write.txt','x') as file:
+#     file.write('Hola a todo el mundo')
+    
+import platform
+clear()
+print(platform.architecture())
+print(platform.version())
