@@ -1,3 +1,4 @@
+#Francisco José de Torres Sánchez-Simón
 from os import system
 from time import sleep
 from datetime import datetime
@@ -191,3 +192,5 @@ exit_button.pack(side='bottom')
 
 root.mainloop()
 
+#Help from: https://copilot.microsoft.com/sl/iirHZFthDMa
+#Online version: 
