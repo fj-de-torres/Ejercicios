@@ -81,8 +81,10 @@ def confirm_quit():
         if not confirm:
             return
     
-    root.destroy
+    root.destroy()
 
+def close_current_tab():
+    notebook.forget(notebook.select())
 
 root = tk.Tk()
 root.geometry("300x300")
@@ -103,6 +105,7 @@ menu_bar.add_cascade(label="Archivo", menu=file_menu)
 file_menu.add_command(label="Nuevo", command=create_file, accelerator="Ctrl+N")
 file_menu.add_command(label="Abrir", command=open_file, accelerator="Ctrl+O")
 file_menu.add_command(label="Guardar", command=save_file, accelerator="Ctrl+S")
+file_menu.add_command(label="Cerrar tab", command=close_current_tab, accelerator="Ctrl+Q")
 file_menu.add_command(label="Salir", command=confirm_quit)
 
 #creacion del notebook
@@ -114,6 +117,7 @@ create_file()
 root.bind("<KeyPress>", lambda event: check_for_changes())
 root.bind("<Control-n>", lambda event: create_file())
 root.bind("<Control-o>", lambda event: open_file())
+root.bind("<Control-q>", lambda event: close_current_tab())
 root.bind("<Control-s>", lambda event: save_file())
 
 root.mainloop()
