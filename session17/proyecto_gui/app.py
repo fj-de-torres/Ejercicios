@@ -193,4 +193,4 @@ exit_button.pack(side='bottom')
 root.mainloop()
 
 #Help from: https://copilot.microsoft.com/sl/iirHZFthDMa
-#Online version: 
+#Online version: https://github.com/fj-de-torres/Ejercicios/tree/main/session17/proyecto_gui
