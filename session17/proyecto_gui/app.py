@@ -1,4 +1,8 @@
 #Francisco José de Torres Sánchez-Simón
+#The code doesn't work in gui mode. Only calling the class method from the terminal and commenting out the 'input' lines. I don't know why. I have received the aid of Copilot-Bing chat which conversation I share here: 
+#https://copilot.microsoft.com/sl/iirHZFthDMa
+
+#Online version: https://github.com/fj-de-torres/Ejercicios/tree/main/session17/proyecto_gui
 from os import system
 from time import sleep
 from datetime import datetime
@@ -20,7 +24,7 @@ def alert(string:str) -> str:
 class InvalidDateException(Exception):
     pass
 
-class tasks:
+class Tasks:
     def __init__(self) -> None:
         """Connect to the local data base"""
         self.connect = sqlite3.connect('tasks.db') # If it doesn't exist, it will be created.
@@ -102,7 +106,8 @@ class tasks:
             print('-'*50)
 
 clear()
-# tasks_francisco = tasks()
+#This is the code I tried that doesn't display the widgets in an orderdly manner:
+tasks_francisco = Tasks()
 # tasks_francisco.add_task("Nothing for tomorrow","20/06/2024","low")
 # tasks_francisco.show_tasks()
 
@@ -147,7 +152,9 @@ clear()
 # exit_button.pack()
 # root.mainloop()
 
-# Create the main window with specified dimensions
+# Create an instance of the tasks class
+tasks_francisco = Tasks()
+
 root = tk.Tk()
 root.geometry("500x400")
 root.title("My tasks app")
@@ -165,6 +172,7 @@ input_frame = tk.Frame(root)
 input_frame.pack(expand=True)
 
 # Create Labels and Entry widgets
+entry_vars = []  # List to hold the StringVar objects
 for i, label_text in enumerate(["Brief task description:", "Deadline date:", "Priority:"]):
     # Create a Label
     label = ttk.Label(input_frame, text=label_text, font=('Arial', 15))
@@ -172,25 +180,13 @@ for i, label_text in enumerate(["Brief task description:", "Deadline date:", "Pr
 
     # Create an Entry (text box)
     entry_var = tk.StringVar()
+    entry_vars.append(entry_var)  # Add the StringVar object to the list
     entry = ttk.Entry(input_frame, width=30, textvariable=entry_var)
     entry.grid(row=i, column=1, padx=(0, 10), pady=5)
 
-# Create a Frame for the exit button
-exit_button_frame = tk.Frame(root)
-exit_button_frame.pack(side='bottom', fill='x')
-
-# Create an Exit button
-exit_button = ttk.Button(exit_button_frame, text="Exit", command=root.destroy)
-exit_button.pack(side='bottom')
-
-root.mainloop()
-
-
-# Create an Exit button
-exit_button = ttk.Button(exit_button_frame, text="Exit", command=root.destroy)
-exit_button.pack(side='bottom')
-
-root.mainloop()
-
-#Help from: https://copilot.microsoft.com/sl/iirHZFthDMa
-#Online version: https://github.com/fj-de-torres/Ejercicios/tree/main/session17/proyecto_gui
+# Function to fetch the text and call tasks_francisco.add_task
+def fetch_and_call():
+    # Fetch the text from the StringVar objects
+    args = [var.get() for var in entry_vars]
+    # Call tasks_francisco.add_task with the fetched text
+    tasks_francisco.add_task(*args)
