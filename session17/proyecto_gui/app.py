@@ -3,7 +3,10 @@
 #https://copilot.microsoft.com/sl/iirHZFthDMa
 
 #Online version: https://github.com/fj-de-torres/Ejercicios/tree/main/session17/proyecto_gui
+import tkinter as tk
+from tkinter import ttk
 
+from bbdd import *
 if __name__ = "__main__":
 
     clear()
@@ -103,4 +106,4 @@ if __name__ = "__main__":
 
         root.mainloop()
     
-    
+

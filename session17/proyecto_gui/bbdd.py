@@ -2,8 +2,6 @@ from os import system
 from time import sleep
 from datetime import datetime
 import sqlite3
-import tkinter as tk
-from tkinter import ttk
 from colorama import Fore, Back, Style
 
 #------Formatting functions for the command line:-----------------
