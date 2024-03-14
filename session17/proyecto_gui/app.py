@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from bbdd import *
-if __name__ = "__main__":
+if __name__ == "__main__":
 
     clear()
     #This is the code I tried that doesn't display the widgets in an orderdly manner:
@@ -106,4 +106,4 @@ if __name__ = "__main__":
 
         root.mainloop()
     
-
+    gui()
