@@ -1,16 +1,9 @@
-# Correción del profesor:
-import tkinter as tk
-from tkinter import messagebox
+class Tarea:
+    def __init__(self, descripcion, fecha, prioridad):
+        self.descripcion = descripcion
+        self.fecha = fecha
+        self.prioridad = prioridad
+        self.completada = False
 
-#Creamos a continuacoión, una clase que represente la aplicación:
-
-class ApplicationTasks:
-
-    def __init__(self,master) -> None: #Paso la ventana principal como parámetro externo.
-        #Lista de tareas
-        self.lista_tareas = list()
-        self.master = master
-        self.master.title("Aplicación de tareas")
-
-        #etiquetas
-        
+    def __str__(self):
+        return f'{self.nombre} - {self.descripcion}'
