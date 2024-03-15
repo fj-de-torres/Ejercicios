@@ -57,3 +57,31 @@ class Iterator_CafeQueue(Iterator):
 
     def __iter__(self):
         return self
+
+def serve_customers(queue):
+    if not isinstance(queue, CustomerQueue):
+        raise TypeError("serve_next() requires a customer queue.")
+
+    if not len(queue):
+        print("Queue is empty.")
+        return
+
+    def brew(order):
+        print(f"(Making {order}...)")
+
+    for customer, orders, to_go in queue: #destructuring aquí
+        for order in orders: brew(order)
+        if to_go:
+            print(f"Order for {customer}!")
+        else:
+            print(f"(Takes order to {customer})")
+
+if __name__ == "__name__":
+    queue = CafeQueue()
+    queue.add_customer('Raquel', 'double macchiato', to_go=False)
+    queue.add_customer('Naomi', 'large mocha, skim')
+    queue.add_customer('Anmol', 'mango lassi')
+
+    print(f"The first person in line is {queue.first}.")
+    serve_customers(queue)
+    #No está funcionado pero al profesor sí le salen outputs.
