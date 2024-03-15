@@ -53,3 +53,42 @@ match pizza:
         print("¡Hoy hay pizza hawaiana!")
     case _:
         print("No hay pizza hoy")
+
+clear()
+## Matchear una tupla:
+order = ['tall','venti', 'no whip', 'mocha latte', 'for here']
+
+match order:
+    case ('tall', *drink, 'for here'):
+        drink = ' '.join(drink)
+        print(drink)
+    case _:
+        print("No se encontro la orden")
+
+## Matchear una lista:
+order = ['venti', 'no whip', 'mocha latte', 'for here']
+
+match order:
+    case ('tall', *drink, 'for here'):
+        drink = ' '.join(drink)
+        print(drink)
+    case ['venti', *drink, 'for here']:
+        drink = ' '.join(drink)
+        print(drink)
+    case _:
+        print("No se encontro la orden")
+
+## Matching de diccionario:
+order = {
+    'size': 'tall',
+    'notes': 'no whip',
+    'drink': 'mocha latte',
+    'serve': 'for here'
+}
+
+match order:
+    case {'size': 'tall', 'serve': 'for here', **resto}:
+        drink = f"{resto['drink']} {resto['notes']}"
+        print(drink)
+    case _:
+        print("No se encontro la orden")
