@@ -33,10 +33,10 @@ background_label.pack()
 
 
 
-button_1 = tk.Button(main_frame, text="Button #1")
-button_2 = tk.Button(main_frame, text="Button #2")
-button_3 = tk.Button(main_frame, text="Button #3")
-exit_button = tk.Button(main_frame, text="Exit",command=Click)
+button_1 = tk.Button(main_frame, text="Button ♓",font=("Helvetica",12))
+button_2 = tk.Button(main_frame, text="Button ♌",font=("Helvetica",12))
+button_3 = tk.Button(main_frame, text="Button ♊",font=("Helvetica",12))
+exit_button = tk.Button(main_frame, text="Exit",command=Click,font=("Helvetica",12))
 # button_1.pack(s="left",fill="x",padx=(10,10))
 # button_2.pack(s="left",fill="x",padx=(10,10))
 # button_3.pack(s="left",fill="x",padx=(10,10))
@@ -50,4 +50,8 @@ button_3.place(x=150,y=290)
 exit_button.pack(side=tk.BOTTOM)
 exit_button.place(x=170,y=340)
 #button_4.pack(side=tk.BOTTOM,fill="x")
+
+switch = tk.IntVar()
+switch.set(1)
+
 window.mainloop()
