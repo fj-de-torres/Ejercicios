@@ -4,6 +4,7 @@ from os import system
 from colorama import Fore
 
 system("cls || clear")
+
 def saludar():
     print(Fore.YELLOW + f"¡Hola {nombre_usuario.get()}!" + Fore.WHITE) #Recojo lo que se escriba en la ventana de texto
 
