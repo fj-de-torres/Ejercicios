@@ -1,3 +1,5 @@
+from os import system
+import requests
 from bs4 import BeautifulSoup
 
 html = """
@@ -24,6 +26,10 @@ This is just a text <br />
 </body>
 </html>
 """
+def clear():
+
+    system("cls | clear")
+clear()
 #crear el objeto Soup
 soup = BeautifulSoup(html, 'html.parser')
 
@@ -40,3 +46,15 @@ print(soup.find_all('p'))
 for parrafo in soup.find_all('p'):
     print(parrafo.text)
 
+print(soup.find_all(['p','a']))
+
+### divs que cumplen un determinado criterio:
+
+print(soup.find_all('div', class_="some_class"))
+
+### Etiquetas *a* que realmente tengan href:
+print(soup.find_all('a', href=True))
+
+for link in soup.find_all('a',href=True):
+    response = requests.get(link.get('href'))
+    print(response)
