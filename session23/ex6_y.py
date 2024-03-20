@@ -1,4 +1,7 @@
 #𝕱𝖗𝖆𝖓𝖈𝖎𝖘𝖈𝖔 𝕵. 𝖉𝖊 𝕿𝖔𝖗𝖗𝖊𝖘
+from os import system
+def clear():
+    system("cls || clear")
 
 class LivingBeing:
     def __init__(self,name):
@@ -23,7 +26,7 @@ class Persona(LivingBeing):
         self.__age = new_age
     
     def __init__(self,name:str,age:str) -> None:
-        self.__name = name
+        super.__name__
         self.__age = age
     
     def print_info(self):
