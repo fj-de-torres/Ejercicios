@@ -9,7 +9,7 @@ def clear():
     system("cls || clear")
 
 def add_item(item:str,quantity:int) ->dict:
-    stock[item]= quantity
+    stock[item] = quantity
     return stock
 
 def update_stock(item:str, quantity:int) -> dict:
@@ -24,14 +24,19 @@ def update_stock(item:str, quantity:int) -> dict:
 def del_item(item:str) ->dict:
     if item in stock:
         stock.pop(item)
+        print(f"{item} removed from stock")
+        sleep(2)
     else:
         print(f"Item {item} is not in stock")
         sleep(2)
 
 def print_stock(stock):
-    
-    print(stock)
-
+    if len(stock) != 0:
+        for items,quant in stock.items():
+            print(f"Item: {items}", f"Num of items: {quant}")
+        #print(stock)
+    else:
+        print(Style.BRIGHT + "Stock is empty!")
 while True:
     clear()
     response = input("""
@@ -46,24 +51,26 @@ while True:
         case "1":
             clear()
             item = input("Please insert item name to add to stock: ")
-            quantity = input(f"Please insert quantity for {item} (one by default): ")
-            print(add_item(item,quantity=1))
+            quantity = input(f"Please insert quantity for {item}: ")
+            print(add_item(item,quantity))
         
         case "2":
             clear()
             item = input("Please insert item name to update in stock: ")
             quantity = input(f"Please insert  new quantity for {item}: ")
             print(update_stock(item,quantity=1))
+            sleep(2)
         
         case "3":
             clear()
             item = input("Please choose item name to remove from stock: ")
-            print(del_item(item,quantity=1))
+            print(del_item(item))
+            sleep(2)
 
         case "4":
             clear()
             print_stock(stock)
-            sleep(2)
+            sleep(3)
 
         case "5":
             print(Fore.YELLOW + "Exiting...")
