@@ -2,6 +2,7 @@
 from os import system
 import requests
 from colorama import Fore, Back, Style
+from prettytable import PrettyTable
 
 density_url = "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population-density.json"
 capital_url = "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json"
@@ -20,27 +21,47 @@ density_data = density_response.json()
 
 #print(density_data)
 
-personal_dic = dict()
+# personal_dic = dict()
+personal_list = []
 
-# for index, element in enumerate(capital_data):
-#     print(density_data[index]["density"])
-#     #print(element)
-
-#print(personal_dic)
 print("Longitud de capital_data es:",len(capital_data))
 print("Longitud de density_data es:",len(density_data))
 
-try:
-    for index,_ in enumerate(capital_data):
-        if capital_data[index]["country"] == density_data[index]["country"]:
-            capital_data[index].update(density_data[index].items())
-            #print(capital_data[index]["country"])
-except IndexError:
-    print(f"{capital_data[index]['country']} deleted from system")
-    del capital_data[index]
-finally:
-    print(capital_data)
-    print(len(capital_data))
+capitals_dict = {item['country']:item for item in capital_data}
+densities_dict = {item['country']:item for item in density_data}
+
+
+
+#print(capitals_dict)
+#print(densities_dict)
+
+for country, capital_item in capitals_dict.items():
+    personal_dict = {}
+    if country in densities_dict:
+        personal_dict.update(capital_item)
+        personal_dict.update(densities_dict[country])
+        personal_list.append(personal_dict)
+    
+#print(personal_list)
+        
+
+header_list = []
+
+for key in personal_list[0].keys():
+    header_list.append(Fore.YELLOW + f"{key}"+Fore.WHITE)
+#columna.add_autoindex("Country nº")
+#print(header_list)    
+columna = PrettyTable(header_list)
+count = 0
+for count,item in enumerate(personal_list):
+    count 
+    row = []
+    for value in item.values():
+        row.append(value)
+    columna.add_row(row)
+
+print(columna)
+print(count)
 
 #with open("countries.txt",wt) as file:
 
