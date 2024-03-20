@@ -1,3 +1,4 @@
+# DocStrings:
 """Modulo que contiene unas funciones operativas matematicas"""
 import pydoc 
 #Lo comento si no lo quiero hacer desde el código sino desde consola:
