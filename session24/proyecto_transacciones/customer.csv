@@ -2,3 +2,8 @@ customer_id,customer
 1,Joe
 2,Mary
 3,Sue
+{
+    1:{customer_id:1, customer: Mary},
+    2: {},
+    3: {}
+}
