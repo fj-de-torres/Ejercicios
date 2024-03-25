@@ -3,8 +3,9 @@ from sys import path
 path.append("/home/francisco/Documents/Learning/PUE/Python/Ejercicios/")
 from funfont import *
 system("cls || clear")
+"""Practicing errors"""
 try:
-    fulano = open("./Edube/Module2/timer.py",'rt',encoding="utf-8")
+    fulano = open("./Edube/Essentials2/timer.py",'rt',encoding="utf-8")
     print(header(fulano.read()))
     fulano.close()
 except IOError as exc:

@@ -1,4 +1,4 @@
-#🅻🅸🆂🆃🅰🆂:
+# 🅻🅸🆂🆃🅰🆂:
 
 import os
 os.system("cls || clear")
@@ -41,7 +41,8 @@ def crear_data():
 
     return program
 programacion = crear_data() #Invocación para crear la lista programación
-
+### Maneras de eliminar elementos de una lista:
+#https://www.tutorialspoint.com/How-to-remove-an-object-from-a-list-in-Python
 def eliminar_duplicados(lista_lenguajes):
     lista_sin_duplicados = []
     for lenguaje in lista_lenguajes:

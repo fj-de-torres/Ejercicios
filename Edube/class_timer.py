@@ -19,11 +19,11 @@ class MyTimer:
             self.seconds -= 1
         return self.seconds
 
-stopwatch_5 = MyTimer(5)
+stopwatch_5 = MyTimer(25)
 clear()
 for second in stopwatch_5:
     if second > 0:
         print(second)
-        time.sleep(1.1)
+        time.sleep(1)
     else:
         print("The End")

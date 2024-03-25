@@ -6,6 +6,10 @@ os.chdir(f"{current_path}" + "/Edube/Essentials2")
 
 paths= ["tree/c/other_courses/python","tree/cpp/other_courses/c","tree/cpp/other_courses/python","tree/python/other_courses/c","tree/python/other_courses/cpp"]
 
+def clear():
+    os.system("cls || clear")
+
+clear()
 try:
     count = 0
     for i in paths:
@@ -16,26 +20,39 @@ except FileExistsError:
 finally:
     print(f"{count} new directory estructures created")
 
-def isdir(dir:str)->None:
-    try:
-        os.chdir()
-    except NotADirectoryError:
-        pass
-    else:
-        True
-        os.chdir("../")
+#Hago un listado de elementos que hay en el directorio.
+#¿Está *dir* en la lista?
+    #Sí:
+        #La añado al path: path += "/" + item.
+        #Quito el *dir* de la lista
+        # Para cada item:
+            #Si es directorio, entro en él.
+            #Vuelvo a lanzar la función *find*
+    #No:
+        #Para cada item:
+            #Si es directorio, entro en él.
+            #Vuelvo a lanzar la función *find*
 
-def find(path:str,dir:str)->str:
-    paths =""
-    current_dir_list = os.listdir()
-    if dir in current_dir_list:
-        path += os.getcwd()
-    else:
-        for items in current_dir_list:
-            if isdir(items):
-                find(os.getcwd,dir)
-    return paths
-print()
+
+def find(path:str, dir:str)->list:
+    #paths_list = []
+    os.chdir(path)
+    #path = os.getcwd()
+    dir_list = os.listdir()
+    
+    for item in dir_list:
+        if dir in dir_list:
+            path += "/" + item
+            dir_list.remove(dir)
+
+        else:
+            if os.path.isdir(item):
+                find(item,dir)
+        
+    print(path)  
+
+
+find(path = "./tree",dir = "python")
 
 
 
