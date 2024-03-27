@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
+import os
+from sys import path
 import tkinter as tk
 from tkinter import messagebox
 
+where_am_i = os.path.dirname(__file__)
+if 'Ejercicios' in where_am_i:
+    while os.path.basename(os.getcwd()) != 'Ejercicios':
+        os.chdir('..')
+
+current_path = os.getcwd()
+path.append(current_path)
+
+from funfont import *
+os.chdir(where_am_i)
 
 def Click():
     replay = messagebox.askquestion("Quit?", "Are you sure?")
@@ -39,7 +51,7 @@ window.geometry("600x650")
 window.title("Mini App with Tkinter")
 
 # Add image file 
-bg = tk.PhotoImage(file = "/home/francisco/Documents/Learning/PUE/Python/Ejercicios/Edube/tkinter/abstract2.png") 
+bg = tk.PhotoImage(file = os.path.join(where_am_i,"abstract2.png"))
   
 # Show image using label 
 main_frame = tk.Frame(window,height=450,width=400,bg="white")

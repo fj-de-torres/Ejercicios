@@ -13,11 +13,20 @@ Salida esperada
 
 3.414213562373095
 """
+import os
 from sys import path
-from os import system
-my_path = "/home/francisco/Documents/Learning/PUE/Python/Ejercicios/"
-path.append(my_path)
+
+where_am_i = os.path.dirname(__file__)
+if 'Ejercicios' in where_am_i:
+    while os.path.basename(os.getcwd()) != 'Ejercicios':
+        os.chdir('..')
+
+current_path = os.getcwd()
+path.append(current_path)
+
 from funfont import *
+os.chdir(where_am_i)
+
 from cartesianas import Point
 import math
 
@@ -45,7 +54,7 @@ class Triangle:
         return self.vertice1.distance_from_point(self.vertice2) + self.vertice1.distance_from_point(self.vertice2) + self.vertice2.distance_from_point(self.vertice3)
         
 
-system("cls || clear")
+os.system("cls || clear")
 
 triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
-#print(triangle.perimeter())
+print(triangle.perimeter())

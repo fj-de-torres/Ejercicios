@@ -1,21 +1,26 @@
 # Accessing APIs:
 
 import os
+from sys import path
 import requests
 from colorama import Fore, Back, Style
+where_am_i = os.path.dirname(__file__)
+if 'Ejercicios' in where_am_i:
+    while os.path.basename(os.getcwd()) != 'Ejercicios':
+        os.chdir('..')
 
-""" with open("/home/francisco/Documents/Learning/PUE/Python/Ejercicios/session20/nearby.json", "rt") as jason:
-    diccionario = jason.read()
+current_path = os.getcwd()
+#current_directory = os.path.basename(current_path)
+path.append(current_path)
+os.chdir(where_am_i)
+print(Fore.YELLOW + os.getcwd() + Fore.WHITE)
 
-#print(diccionario)
-for address in diccionario.keys():
-    print(address) """
-
+#exit()
 
 #Profesor:
 import json
 
-with open('/home/francisco/Documents/Learning/PUE/Python/Ejercicios/session20/nearby.json', 'r') as file:
+with open(os.path.join(where_am_i,'nearby.json'), 'r') as file:
     data = json.load(file)
 
 
