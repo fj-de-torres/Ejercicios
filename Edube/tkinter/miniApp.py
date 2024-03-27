@@ -5,15 +5,6 @@ import tkinter as tk
 from tkinter import messagebox
 
 where_am_i = os.path.dirname(__file__)
-if 'Ejercicios' in where_am_i:
-    while os.path.basename(os.getcwd()) != 'Ejercicios':
-        os.chdir('..')
-
-current_path = os.getcwd()
-path.append(current_path)
-
-from funfont import *
-os.chdir(where_am_i)
 
 def Click():
     replay = messagebox.askquestion("Quit?", "Are you sure?")
