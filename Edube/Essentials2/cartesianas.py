@@ -18,13 +18,18 @@ Salida esperada
 1.4142135623730951
 1.4142135623730951
 """
-
+import os
 import math
 from sys import path
-from os import system
 
-path.append("/home/francisco/Documents/Learning/PUE/Python/Ejercicios/")
+current_path = os.getcwd()
+
+#current_directory = os.path.basename(current_path)
+path.append()
 from funfont import *
+def clear():
+    os.system("cls || clear")
+
 class Point:
     def __init__(self, x=0.0, y=0.0):
         self.__x = x
@@ -54,12 +59,14 @@ class Point:
         print("\n")
         return distance
 
-system("cls || clear")
+clear()
+
 point1 = Point(0, 0)
 point2 = Point(1, 1)
 #print(point2)
 print_columna("point1.distance_from_point(point2)",point1.distance_from_point(point2))
-system("cls || clear")
+clear()
+
 #linea(times=100)
 print_columna("point2.distance_from_xy(2, 0)",point2.distance_from_xy(2, 0))
 print()
