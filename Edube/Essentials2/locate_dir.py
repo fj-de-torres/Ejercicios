@@ -62,12 +62,14 @@
 ## Result given by copilot:
 
 import os
+my_working_directory = os.path.abspath(__file__)
 
 def clear():
     os.system("cls || clear")
 
 def find(path:str, dir:str)->list:
-    dir_list = sorted(os.listdir(path), key=str.casefold)
+    #dir_list = sorted(os.listdir(path), key=str.casefold)
+    dir_list = sorted(os.listdir(path))
     for i in dir_list:
         full_path = os.path.join(path, i)
         if os.path.isdir(full_path):
@@ -76,6 +78,9 @@ def find(path:str, dir:str)->list:
             find(full_path, dir)
  
 clear()
+os.chdir(os.path.dirname(my_working_directory))
+#print(os.getcwd())
+#exit()
 find("tree","python")
 
 #TODO: Look for with semantra explanations to os.walk and os.path.join
