@@ -1,7 +1,16 @@
 #High Order Function (HOF):
 #Una función recibe como parámetro, otra función:
 from os import system
+from colorama import Fore, Back, Style
 system("cls. || clear")
+def confirm():
+    key = input("Press enter: ")
+    if key:
+        print(Fore.YELLOW + f"going on with key '{key}'" + Fore.WHITE)
+    else:
+        print(Fore.YELLOW + "Continuing..." + Fore. WHITE)
+    print(Fore.YELLOW + "-"*100 + Fore.WHITE)
+
 def calcular(a,b, func):
     return func(a,b)
 
@@ -37,10 +46,12 @@ def flujo_empresarial():
     print("Se esta ejecutando un mega flujo empresarial!")
 
 flujo_empresarial()
-
+confirm()
 @procesar_siempre
 def otro_flujo_empresarial():
     print("Se esta ejecutando otro mega flujo empresarial!")
+
+confirm()
 
 flujo_empresarial()
 otro_flujo_empresarial()
@@ -61,7 +72,7 @@ def flujo_empresarial():
 @procesar_siempre
 def otro_flujo_empresarial():
     print("Se esta ejecutando otro mega flujo empresarial!")
-
+confirm()
 flujo_empresarial()
 otro_flujo_empresarial()
 
@@ -104,6 +115,8 @@ def flujo_empresarial(n: int):
 @procesar_siempre
 def otro_flujo_empresarial():
     print("Se esta ejecutando otro mega flujo empresarial!")
+
+confirm()
 
 print(flujo_empresarial(10))
 #otro_flujo_empresarial()

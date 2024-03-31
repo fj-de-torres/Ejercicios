@@ -61,38 +61,40 @@ class CustomDict(dict): #Una subclase de la clase diccioario. Es decir, una clas
 
 system("cls || clear")
 
+f = dict()
+f['a'] = 10
+print(f"{f['a'] = }")
+d = CustomDict()
+d['a'] = 10
+print(f"{d['a'] = }")
+
+d[1] = 20
+print(f"{d[1] = }")
 
 d = CustomDict()
 d['a'] = 10
-print(d['a'])
+print(f"{d['a'] = }")
 
 d[1] = 20
-print(d[1])
+print(f"{d[1] = }")
 
-d = CustomDict()
-d['a'] = 10
-print(d['a'])
-
-d[1] = 20
-print(d[1])
-
-print(d['b'])
+#print(d['b'])
 
 
-#Instanciar (no escarciar):
-s1 = Scoop("chocolate")
-s2 = Scoop("vainilla")
-s3 = Scoop("fresa")
-bowl = Bowl()
-bowl.add_scoops(s1, s2, s3)
-print(bowl)
-#print(bowl.__repr__())
+# #Instanciar (no escarciar):
+# s1 = Scoop("chocolate")
+# s2 = Scoop("vainilla")
+# s3 = Scoop("fresa")
+# bowl = Bowl()
+# bowl.add_scoops(s1, s2, s3)
+# print(bowl)
+# #print(bowl.__repr__())
 
-lista = list(range(20))
+# lista = list(range(20))
 
-for numero in lista:
-    if numero == 5:
-        break #Esto hace que el for temrine de forma anticipada; por lo que el else no se ejecutará.
-    print(numero)
-else:
-    print("Sólo se ejecuta el else si el for se ejecuta de forma completa")
+# for numero in lista:
+#     if numero == 5:
+#         break #Esto hace que el for temrine de forma anticipada; por lo que el else no se ejecutará.
+#     print(numero)
+# else:
+#     print("Sólo se ejecuta el else si el for se ejecuta de forma completa")
