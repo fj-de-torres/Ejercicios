@@ -1,4 +1,4 @@
-## unción que recibe una tarea y la añade a la lista de tareas ya existente
+## Función que recibe una tarea y la añade a la lista de tareas ya existente
 
 ```
 def anyadir_tarea(tarea: tuple, l_tareas: list[tuple]) -> list[tuple]:
