@@ -52,12 +52,17 @@ This is going to be the default file if no one is specified by the user:
 default_file = "./data/user.csv" #Set as default path/file.csv
 ```
 
-"""To let the user choose a file where to store the read data:"""
+To let the user choose a file where to store the read data:
+
+```
 def fetch_url_from_user():
       file_to_open = input(Style.BRIGHT + "Please enter the url to fetch users from: " + Style.RESET_ALL)
       return file_to_open if file_to_open != ("" or None) else default_file
+```
 
-"""The option I choose at tme moment just for testing, is cvs_file as the default_file. Otherwise, cvs_file = fetch_url_from_user()"""
+The option I choose at tme moment just for testing, is cvs_file as the default_file. Otherwise, cvs_file = fetch_url_from_user():
+
+```
 csv_file = default_file
 # cvs_file = fetch_url_from_user()
 def get_users (url:str):
@@ -73,6 +78,7 @@ def get_users (url:str):
     return [data,multi_user]
     # print(data)
     # print(len(data))
+
 def user_to_str(user:list) -> str:
     if user [1] == False:
         user_str = user[0][0] + "," + user[0][1] + "," + user[0][4] + "," + user[0][5] + "," + user[0][6] + "," + user[0][7]
