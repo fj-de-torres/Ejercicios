@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Json test</title>
-</head>
+<html>
 
 <body>
-    <h2>JSON User Account Example</h2>
-    <p id="myuser"></p>
+    <p id="show"></p>
     <script>
-        var user = '{
-        "FirstName": "John", "LastName": "Smith", "PhoneNumbers":
-        {
-            "type": "Home", "number": "333 - 333 - 3333"
-        },
-        {
-            "type" : "Cell", "number" : "444 - 444 - 4444"
-        } ';
+        var obj, x, y;
+        obj = { "title": "R in 8 Hours", "author": "Ray Yao" };
+        x = obj.title;
+        y = obj.author;
+        document.getElementById("show").innerHTML = x + " " + y;
     </script>
 </body>
+
+</html>
 
 </html>
