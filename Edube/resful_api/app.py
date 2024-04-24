@@ -9,5 +9,4 @@ if __name__ == "__main__":
             print('\t\t', prop.tag, end='')
             if prop.tag == 'price':
                 print(prop.attrib, end='')
-        print(' =', prop.text)
-    
+            print(' =', prop.text)
