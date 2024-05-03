@@ -1,0 +1,12 @@
+{
+    "FirstName": "John",
+    "LastName": "Smith",
+    "PhoneNumber1": {
+        "type": "Home",
+        "number": "333-333-3333"
+    },
+    "PhoneNumber2": {
+        "type": "Cell",
+        "number": "444-444-4444"
+    }
+}
